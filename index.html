@@ -235,12 +235,18 @@ footer{
 </header>
 
 <nav>
-    <button onclick="showTab('home')">Home</button>
-    <button onclick="showTab('research')">Research</button>
-    <button onclick="showTab('teaching')">Teaching</button>
-    <button onclick="showTab('contact')">Contact</button>
+<button class="tabButton active" onclick="showTab('home', this)">Home</button>
+<button class="tabButton" onclick="showTab('research', this)">Research</button>
+<button class="tabButton" onclick="showTab('teaching', this)">Teaching</button>
+<button class="tabButton" onclick="showTab('contact', this)">Contact</button>
 </nav>
 
+    nav button.active{
+    background:#e6eef8;
+    color:#003366;
+    border-radius:6px;
+}
+    
 <div class="content">
 
     <div id="home" class="tab active">
@@ -346,12 +352,24 @@ footer{
 </footer>
 
 <script>
-function showTab(tabId){
-    let tabs = document.querySelectorAll('.tab');
-    tabs.forEach(tab => {
-        tab.classList.remove('active');
-    });
-    document.getElementById(tabId).classList.add('active');
+function showTab(tabId, element){
+
+let tabs=document.querySelectorAll('.tab');
+
+tabs.forEach(tab=>{
+tab.classList.remove('active');
+});
+
+document.getElementById(tabId).classList.add('active');
+
+let buttons=document.querySelectorAll('.tabButton');
+
+buttons.forEach(btn=>{
+btn.classList.remove('active');
+});
+
+element.classList.add('active');
+
 }
 </script>
 
