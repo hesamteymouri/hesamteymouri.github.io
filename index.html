@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hesam Teymouri</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f5f5f5;
+}
+
+header{
+    background:#003366;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#0055a5;
+    padding:10px;
+    text-align:center;
+}
+
+nav button{
+    background:none;
+    border:none;
+    color:white;
+    font-size:16px;
+    margin:0 15px;
+    cursor:pointer;
+}
+
+nav button:hover{
+    text-decoration:underline;
+}
+
+.content{
+    padding:40px;
+    max-width:900px;
+    margin:auto;
+    background:white;
+}
+
+.tab{
+    display:none;
+}
+
+.tab.active{
+    display:block;
+}
+
+h2{
+    color:#003366;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Hesam Teymouri</h1>
+<p>Marketing Researcher | Consumer Behavior | AI & Technology</p>
+</header>
+
+<nav>
+<button onclick="showTab('home')">Home</button>
+<button onclick="showTab('research')">Research</button>
+<button onclick="showTab('teaching')">Teaching</button>
+<button onclick="showTab('contact')">Contact</button>
+</nav>
+
+<div class="content">
+
+<div id="home" class="tab active">
+<h2>Welcome</h2>
+<p>
+Welcome to my academic website. I study how emerging technologies such as artificial intelligence shape consumer behavior and service experiences.
+</p>
+<p>
+My research focuses on consumer decision-making, AI-driven services, and prosocial consumption.
+</p>
+</div>
+
+<div id="research" class="tab">
+<h2>Research</h2>
+
+<h3>AI and Consumer Decision-Making</h3>
+<p>
+Examining how AI-based service decisions influence consumer perceptions of control, fairness, and satisfaction.
+</p>
+
+<h3>Self-Service Technologies</h3>
+<p>
+Investigating why certain customers resist self-service technologies and how entitlement affects adoption.
+</p>
+
+<h3>Prosocial Consumer Behavior</h3>
+<p>
+Studying how retail donation design influences charitable giving and consumer engagement.
+</p>
+
+</div>
+
+<div id="teaching" class="tab">
+<h2>Teaching</h2>
+
+<h3>Courses Taught</h3>
+
+<ul>
+<li>Principles of Marketing</li>
+<li>Digital Marketing</li>
+<li>Marketing Research</li>
+<li>Marketing Analytics</li>
+</ul>
+
+<p>
+My teaching emphasizes experiential learning and real-world applications of marketing concepts through data analysis, digital platforms, and case studies.
+</p>
+
+</div>
+
+<div id="contact" class="tab">
+<h2>Contact</h2>
+
+<p>Email: hesam@example.com</p>
+<p>LinkedIn: linkedin.com/in/hesam</p>
+
+</div>
+
+</div>
+
+<script>
+
+function showTab(tabId){
+
+let tabs=document.querySelectorAll('.tab');
+
+tabs.forEach(tab=>{
+tab.classList.remove('active');
+});
+
+document.getElementById(tabId).classList.add('active');
+
+}
+
+</script>
+
+</body>
+</html>
