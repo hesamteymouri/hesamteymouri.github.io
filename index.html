@@ -19,19 +19,16 @@ body{
 }
 
 header{
-    background:linear-gradient(135deg,#0a2e57,#0055a5 60%,#1c73d1);
+    background:linear-gradient(135deg, #003366, #0055a5);
     color:white;
-    padding:90px 20px 70px;
+    padding:60px 20px 40px;
     text-align:center;
-    position:relative;
-    overflow:hidden;
 }
 
 header h1{
     margin:0;
-    font-size:46px;
+    font-size:42px;
     font-weight:700;
-    letter-spacing:0.5px;
 }
 
 header p{
@@ -40,16 +37,6 @@ header p{
     max-width:700px;
     margin-left:auto;
     margin-right:auto;
-}
-    
-header::after{
-    content:"";
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:4px;
-    background:rgba(255,255,255,0.25);
 }
 
 nav{
@@ -104,36 +91,6 @@ nav button.active{
     border-radius:16px;
     padding:35px;
     box-shadow:0 8px 24px rgba(0,0,0,0.08);
-}
-
-.full-section{
-    width:100%;
-    padding:80px 20px;
-}
-
-.full-section-inner{
-    max-width:1100px;
-    margin:auto;
-}
-
-.section-light{
-    background:white;
-}
-
-.section-blue{
-    background:#f3f7fd;
-}
-
-.full-section h2{
-    color:#003366;
-    font-size:32px;
-    margin-bottom:20px;
-}
-
-.full-section p{
-    font-size:18px;
-    max-width:850px;
-    line-height:1.7;
 }
 
 h2{
@@ -241,30 +198,6 @@ footer{
     font-size:14px;
 }
 
-.course-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:16px;
-    margin-bottom:20px;
-}
-
-.course-card{
-    display:block;
-    background:#f8fbff;
-    border-left:5px solid #0055a5;
-    padding:18px;
-    border-radius:10px;
-    text-decoration:none;
-    color:#003366;
-    font-weight:600;
-    transition:all 0.2s ease;
-}
-
-.course-card:hover{
-    background:#eaf2fb;
-    transform:translateY(-2px);
-}
-
 @media (max-width: 768px){
     header h1{
         font-size:32px;
@@ -296,18 +229,29 @@ footer{
         width:200px;
         height:200px;
     }
+}
+    .course-grid{
+display:grid;
+grid-template-columns:1fr;
+gap:16px;
+margin-bottom:20px;
+}
 
-    .full-section{
-        padding:60px 20px;
-    }
+.course-card{
+display:block;
+background:#f8fbff;
+border-left:5px solid #0055a5;
+padding:18px;
+border-radius:10px;
+text-decoration:none;
+color:#003366;
+font-weight:600;
+transition:all 0.2s ease;
+}
 
-    .full-section h2{
-        font-size:28px;
-    }
-
-    .full-section p{
-        font-size:17px;
-    }
+.course-card:hover{
+background:#eaf2fb;
+transform:translateY(-2px);
 }
 </style>
 </head>
@@ -336,6 +280,7 @@ footer{
                     <p>
                         Welcome to my academic website. I study how emerging technologies such as artificial intelligence shape customer experiences. My research provides managerial implications built on deep theoretical foundations and rigorous methods.
                     </p>
+                   
 
                     <div class="button-group">
                         <a href="#">Download CV</a>
@@ -347,46 +292,32 @@ footer{
                     <img src="profile.jpg" alt="Hesam Teymouri Athar">
                 </div>
             </div>
+
+            <div class="highlight-grid">
+                <div class="card">
+                    <h3>Research Interests</h3>
+                    <p>Consumer–Technology Interactions (AI Systems, Service Technologies, Digital Platforms); Retail and Service Experience Design; Customer Dissatisfaction.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Teaching Approach</h3>
+                    <p>Experiential, future-oriented, and accessible teaching that connects concepts to real-world marketing problems.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Methods</h3>
+                    <p>Behavioral experiments, Regression-Based Modeling, Difference-in-Difference, Mixed-Effects Modeling.</p>
+                </div>
+            </div>
         </div>
     </div>
-
-</div>
-
-<div class="full-section section-light">
-    <div class="full-section-inner">
-        <h2>Research Interests</h2>
-        <p>
-            Consumer–Technology Interactions (AI Systems, Service Technologies, Digital Platforms); Retail and Service Experience Design; Customer Dissatisfaction.
-        </p>
-    </div>
-</div>
-
-<div class="full-section section-blue">
-    <div class="full-section-inner">
-        <h2>Teaching Approach</h2>
-        <p>
-            Experiential, future-oriented, and accessible teaching that connects concepts to real-world marketing problems.
-        </p>
-    </div>
-</div>
-
-<div class="full-section section-light">
-    <div class="full-section-inner">
-        <h2>Methods</h2>
-        <p>
-            Behavioral experiments, Regression-Based Modeling, Difference-in-Difference, Mixed-Effects Modeling.
-        </p>
-    </div>
-</div>
-
-<div class="content">
 
     <div id="research" class="tab">
         <div class="section-box">
             <h2>Research</h2>
-            <p>
-                My research focuses on consumer–technology interactions, retail and service experience design, and customer dissatisfaction and well-being.
-            </p>
+ <p>
+                        My research focuses on consumer–technology interactions, retail and service experience design, and customer dissatisfaction and well-being.
+                    </p>
             
             <div class="card">
                 <h3>Agentic AI in the Service Frontline</h3>
@@ -414,20 +345,26 @@ footer{
     <div id="teaching" class="tab">
         <div class="section-box">
             <h2>Teaching</h2>
-            <p>
+<p>
                 My teaching emphasizes experiential learning and real-world applications of marketing concepts through data analysis, digital tools, and case studies. My classes are designed to be forward-looking and accessible to students from a wide range of backgrounds.
             </p>
             
             <h3>Courses Taught</h3>
-            <div class="course-grid">
+          <div class="course-grid">
 
-                <a href="digital-marketing.html" class="course-card">Digital Marketing</a>
-                <a href="marketing-analytics.html" class="course-card">Marketing Analytics</a>
-                <a href="quantitative-marketing-strategy.html" class="course-card">Quantitative Marketing Strategy</a>
-                <a href="marketing-research.html" class="course-card">Marketing Research</a>
-                <a href="principles-of-marketing.html" class="course-card">Principles of Marketing</a>
+<a href="digital-marketing.html" class="course-card">Digital Marketing</a>
 
-            </div>
+<a href="marketing-analytics.html" class="course-card">Marketing Analytics</a>
+
+<a href="quantitative-marketing-strategy.html" class="course-card">Quantitative Marketing Strategy</a>
+
+<a href="marketing-research.html" class="course-card">Marketing Research</a>
+
+<a href="principles-of-marketing.html" class="course-card">Principles of Marketing</a>
+
+</div>
+
+            
         </div>
     </div>
 
