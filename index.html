@@ -19,260 +19,232 @@ body{
 }
 
 header{
-    background:linear-gradient(135deg, #003366, #0055a5);
-    color:white;
-    padding:60px 20px 40px;
-    text-align:center;
+background:linear-gradient(135deg,#0a2e57,#0055a5 60%,#1c73d1);
+color:white;
+padding:90px 20px 70px;
+text-align:center;
+position:relative;
+overflow:hidden;
 }
 
 header h1{
-    margin:0;
-    font-size:42px;
-    font-weight:700;
+margin:0;
+font-size:46px;
+font-weight:700;
+letter-spacing:0.5px;
 }
 
 header p{
-    margin-top:12px;
-    font-size:18px;
-    max-width:700px;
-    margin-left:auto;
-    margin-right:auto;
+margin-top:12px;
+font-size:18px;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+}
+    
+header::after{
+content:"";
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:4px;
+background:rgba(255,255,255,0.25);
 }
 
 nav{
-    background:white;
-    padding:14px 10px;
-    text-align:center;
-    box-shadow:0 2px 8px rgba(0,0,0,0.08);
-    position:sticky;
-    top:0;
-    z-index:1000;
+background:white;
+padding:14px 10px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 nav button{
-    background:none;
-    border:none;
-    color:#003366;
-    font-size:16px;
-    font-weight:600;
-    margin:0 12px;
-    cursor:pointer;
-    padding:10px 14px;
-    border-radius:6px;
-    transition:all 0.2s ease;
+background:none;
+border:none;
+color:#1C0770;
+font-size:16px;
+font-weight:600;
+margin:0 12px;
+cursor:pointer;
+padding:10px 14px;
+border-radius:6px;
+transition:all 0.2s ease;
 }
 
 nav button:hover{
-    background:#e6eef8;
+background:#e6eef8;
 }
 
 nav button.active{
-    background:#e6eef8;
-    color:#003366;
-    border-radius:6px;
+background:#e6eef8;
+color:#1C0770;
+border-radius:6px;
 }
 
 .content{
-    padding:40px 20px;
-    max-width:1100px;
-    margin:40px auto;
+padding:40px 20px;
+max-width:1100px;
+margin:40px auto;
 }
 
 .tab{
-    display:none;
+display:none;
 }
 
 .tab.active{
-    display:block;
+display:block;
 }
 
 .section-box{
-    background:white;
-    border-radius:16px;
-    padding:35px;
-    box-shadow:0 8px 24px rgba(0,0,0,0.08);
+background:white;
+border-radius:16px;
+padding:35px;
+box-shadow:0 8px 24px rgba(0,0,0,0.08);
 }
 
 h2{
-    color:#003366;
-    margin-top:0;
-    margin-bottom:20px;
-    font-size:30px;
+color:#1C0770;
+margin-top:0;
+margin-bottom:20px;
+font-size:30px;
 }
 
 h3{
-    color:#004b8d;
-    margin-bottom:8px;
-}
-
-.hero-section{
-    width:100%;
-    padding:130px 40px 120px;
-    background:white;
-}
-
-.hero-inner{
-    max-width:1700px;
-    margin:auto;
+color:#004b8d;
+margin-bottom:8px;
 }
 
 .hero{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:70px;
-    flex-wrap:wrap;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+flex-wrap:wrap;
 }
 
 .hero-text{
-    flex:1.1;
-    min-width:300px;
-}
-
-.hero-text h2{
-    font-size:42px;
-    margin-bottom:18px;
-    color:#0a2e57;
+flex:2;
+min-width:280px;
 }
 
 .hero-text p{
-    font-size:21px;
-    line-height:1.75;
-    margin-bottom:20px;
-    color:#24384d;
-    max-width:650px;
+font-size:17px;
+margin-bottom:18px;
 }
 
 .hero-image{
-    flex:0.9;
-    min-width:320px;
-    text-align:center;
+flex:1;
+min-width:220px;
+text-align:center;
 }
 
 .hero-image img{
-    width:100%;
-    max-width:430px;
-    height:auto;
-    object-fit:cover;
-    border-radius:24px;
-    border:none;
-    box-shadow:0 18px 45px rgba(0,0,0,0.12);
+width:240px;
+height:240px;
+object-fit:cover;
+border-radius:50%;
+border:6px solid #dce7f5;
+box-shadow:0 6px 20px rgba(0,0,0,0.12);
 }
 
 .button-group{
-    margin-top:28px;
+margin-top:25px;
 }
 
 .button-group a{
-    display:inline-block;
-    background:#0055a5;
-    color:white;
-    text-decoration:none;
-    padding:13px 22px;
-    border-radius:10px;
-    margin-right:12px;
-    margin-bottom:12px;
-    font-weight:600;
-    transition:all 0.2s ease;
+display:inline-block;
+background:#0055a5;
+color:white;
+text-decoration:none;
+padding:11px 18px;
+border-radius:8px;
+margin-right:10px;
+margin-bottom:10px;
+font-weight:600;
+transition:background 0.2s ease;
 }
 
 .button-group a:hover{
-    background:#003366;
-    transform:translateY(-1px);
-}
-.button-group{
-    margin-top:25px;
-}
-
-.button-group a{
-    display:inline-block;
-    background:#0055a5;
-    color:white;
-    text-decoration:none;
-    padding:11px 18px;
-    border-radius:8px;
-    margin-right:10px;
-    margin-bottom:10px;
-    font-weight:600;
-    transition:background 0.2s ease;
-}
-
-.button-group a:hover{
-    background:#003366;
+background:#1C0770;
 }
 
 .highlight-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-    gap:20px;
-    margin-top:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+gap:20px;
+margin-top:30px;
 }
 
 .card{
-    background:#f8fbff;
-    border-left:5px solid #0055a5;
-    border-radius:12px;
-    padding:22px;
+background:#f8fbff;
+border-left:5px solid #0055a5;
+border-radius:12px;
+padding:22px;
 }
 
 .card p{
-    margin-bottom:0;
+margin-bottom:0;
 }
 
 ul{
-    padding-left:22px;
+padding-left:22px;
 }
 
 .contact-links a{
-    color:#0055a5;
-    text-decoration:none;
-    font-weight:600;
+color:#0055a5;
+text-decoration:none;
+font-weight:600;
 }
 
 .contact-links a:hover{
-    text-decoration:underline;
+text-decoration:underline;
 }
 
 footer{
-    text-align:center;
-    padding:30px 20px 40px;
-    color:#5a6b7c;
-    font-size:14px;
+text-align:center;
+padding:30px 20px 40px;
+color:#5a6b7c;
+font-size:14px;
 }
 
 @media (max-width: 768px){
-    header h1{
-        font-size:32px;
-    }
-
-    header p{
-        font-size:16px;
-    }
-
-    nav button{
-        display:inline-block;
-        margin:6px 6px;
-    }
-
-    .section-box{
-        padding:25px;
-    }
-
-    .hero{
-        flex-direction:column-reverse;
-        text-align:center;
-    }
-
-    .hero-text{
-        text-align:center;
-    }
-
-    .hero-image img{
-        width:200px;
-        height:200px;
-    }
+header h1{
+font-size:32px;
 }
-    .course-grid{
+
+header p{
+font-size:16px;
+}
+
+nav button{
+display:inline-block;
+margin:6px 6px;
+}
+
+.section-box{
+padding:25px;
+}
+
+.hero{
+flex-direction:column-reverse;
+text-align:center;
+}
+
+.hero-text{
+text-align:center;
+}
+
+.hero-image img{
+width:200px;
+height:200px;
+}
+}
+
+.course-grid{
 display:grid;
 grid-template-columns:1fr;
 gap:16px;
@@ -286,7 +258,7 @@ border-left:5px solid #0055a5;
 padding:18px;
 border-radius:10px;
 text-decoration:none;
-color:#003366;
+color:#1C0770;
 font-weight:600;
 transition:all 0.2s ease;
 }
@@ -301,98 +273,109 @@ transform:translateY(-2px);
 <body>
 
 <header>
-    <h1>Hesam Teymouri Athar</h1>
-    <p>A teacher-scholar who provides experiential teaching and publishes rigorous research</p>
+<h1>Hesam Teymouri Athar</h1>
+<p>A teacher-scholar who provides experiential teaching and publishes rigorous research</p>
 </header>
 
 <nav>
-    <button class="tabButton active" onclick="showTab('home', this)">Home</button>
-    <button class="tabButton" onclick="showTab('research', this)">Research</button>
-    <button class="tabButton" onclick="showTab('teaching', this)">Teaching</button>
-    <button class="tabButton" onclick="showTab('contact', this)">Contact</button>
+<button class="tabButton active" onclick="showTab('home', this)">Home</button>
+<button class="tabButton" onclick="showTab('research', this)">Research</button>
+<button class="tabButton" onclick="showTab('teaching', this)">Teaching</button>
+<button class="tabButton" onclick="showTab('contact', this)">Contact</button>
 </nav>
 
 <div class="content">
 
-    <div id="home" class="tab active">
-        <div class="section-box">
-            <div class="hero">
-                <div class="hero-text">
-                    <h2>Welcome!</h2>
-                    <p>
-                        Welcome to my academic website. I study how emerging technologies such as artificial intelligence shape customer experiences. My research provides managerial implications built on deep theoretical foundations and rigorous methods.
-                    </p>
-                   
+<div id="home" class="tab active">
+<div class="section-box">
 
-                    <div class="button-group">
-                        <a href="#">Download CV</a>
-                        <a href="https://scholar.google.com/citations?user=7q1oMCUAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
-                    </div>
-                </div>
+<div class="hero">
+<div class="hero-text">
 
-                <div class="hero-image">
-                    <img src="profile.jpg" alt="Hesam Teymouri Athar">
-                </div>
-            </div>
+<h2>Welcome!</h2>
 
-            <div class="highlight-grid">
-                <div class="card">
-                    <h3>Research Interests</h3>
-                    <p>Consumer–Technology Interactions (AI Systems, Service Technologies, Digital Platforms); Retail and Service Experience Design; Customer Dissatisfaction.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Teaching Approach</h3>
-                    <p>Experiential, future-oriented, and accessible teaching that connects concepts to real-world marketing problems.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Methods</h3>
-                    <p>Behavioral experiments, Regression-Based Modeling, Difference-in-Difference, Mixed-Effects Modeling.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="research" class="tab">
-        <div class="section-box">
-            <h2>Research</h2>
- <p>
-                        My research focuses on consumer–technology interactions, retail and service experience design, and customer dissatisfaction and well-being.
-                    </p>
-            
-            <div class="card">
-                <h3>Agentic AI in the Service Frontline</h3>
-                <p>
-                    Examining how AI-based service decisions influence consumer perceptions of control, fairness, and satisfaction.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Self-Service Technologies</h3>
-                <p>
-                    Investigating why certain customers resist self-service technologies and how entitlement affects adoption.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Prosocial Consumer Behavior</h3>
-                <p>
-                    Studying how retail donation design influences charitable giving and consumer engagement.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div id="teaching" class="tab">
-        <div class="section-box">
-            <h2>Teaching</h2>
 <p>
-                My teaching emphasizes experiential learning and real-world applications of marketing concepts through data analysis, digital tools, and case studies. My classes are designed to be forward-looking and accessible to students from a wide range of backgrounds.
-            </p>
-            
-            <h3>Courses Taught</h3>
-          <div class="course-grid">
+Welcome to my academic website. I study how emerging technologies such as artificial intelligence shape customer experiences. My research provides managerial implications built on deep theoretical foundations and rigorous methods.
+</p>
+
+<div class="button-group">
+<a href="#">Download CV</a>
+<a href="https://scholar.google.com/citations?user=7q1oMCUAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
+</div>
+
+</div>
+
+<div class="hero-image">
+<img src="profile.jpg" alt="Hesam Teymouri Athar">
+</div>
+</div>
+
+<div class="highlight-grid">
+
+<div class="card">
+<h3>Research Interests</h3>
+<p>Consumer–Technology Interactions (AI Systems, Service Technologies, Digital Platforms); Retail and Service Experience Design; Customer Dissatisfaction.</p>
+</div>
+
+<div class="card">
+<h3>Teaching Approach</h3>
+<p>Experiential, future-oriented, and accessible teaching that connects concepts to real-world marketing problems.</p>
+</div>
+
+<div class="card">
+<h3>Methods</h3>
+<p>Behavioral experiments, Regression-Based Modeling, Difference-in-Difference, Mixed-Effects Modeling.</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="research" class="tab">
+<div class="section-box">
+
+<h2>Research</h2>
+
+<p>
+My research focuses on consumer–technology interactions, retail and service experience design, and customer dissatisfaction and well-being.
+</p>
+
+<div class="card">
+<h3>Agentic AI in the Service Frontline</h3>
+<p>
+Examining how AI-based service decisions influence consumer perceptions of control, fairness, and satisfaction.
+</p>
+</div>
+
+<div class="card">
+<h3>Self-Service Technologies</h3>
+<p>
+Investigating why certain customers resist self-service technologies and how entitlement affects adoption.
+</p>
+</div>
+
+<div class="card">
+<h3>Prosocial Consumer Behavior</h3>
+<p>
+Studying how retail donation design influences charitable giving and consumer engagement.
+</p>
+</div>
+
+</div>
+</div>
+
+<div id="teaching" class="tab">
+<div class="section-box">
+
+<h2>Teaching</h2>
+
+<p>
+My teaching emphasizes experiential learning and real-world applications of marketing concepts through data analysis, digital tools, and case studies. My classes are designed to be forward-looking and accessible to students from a wide range of backgrounds.
+</p>
+
+<h3>Courses Taught</h3>
+
+<div class="course-grid">
 
 <a href="digital-marketing.html" class="course-card">Digital Marketing</a>
 
@@ -406,38 +389,42 @@ transform:translateY(-2px);
 
 </div>
 
-            
-        </div>
-    </div>
+</div>
+</div>
 
-    <div id="contact" class="tab">
-        <div class="section-box contact-links">
-            <h2>Contact</h2>
-            <p>Email: hteymouri[at]newhaven.edu</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/hesam-teymouri-athar/" target="_blank">linkedin.com/in/hesam-teymouri-athar/</a></p>
-            <p>Faculty Web Page: <a href="https://www.newhaven.edu/faculty-staff-profiles/hesam-teymouri.php/" target="_blank">www.newhaven.edu/faculty-staff-profiles/hesam-teymouri.php/</a></p>
-        </div>
-    </div>
+<div id="contact" class="tab">
+<div class="section-box contact-links">
+
+<h2>Contact</h2>
+
+<p>Email: hteymouri[at]newhaven.edu</p>
+
+<p>LinkedIn: <a href="https://www.linkedin.com/in/hesam-teymouri-athar/" target="_blank">linkedin.com/in/hesam-teymouri-athar/</a></p>
+
+<p>Faculty Web Page: <a href="https://www.newhaven.edu/faculty-staff-profiles/hesam-teymouri.php/" target="_blank">www.newhaven.edu/faculty-staff-profiles/hesam-teymouri.php/</a></p>
+
+</div>
+</div>
 
 </div>
 
 <footer>
-    © 2026 Hesam Teymouri Athar
+© 2026 Hesam Teymouri Athar
 </footer>
 
 <script>
 function showTab(tabId, element){
-    let tabs = document.querySelectorAll('.tab');
-    tabs.forEach(tab => {
-        tab.classList.remove('active');
-    });
-    document.getElementById(tabId).classList.add('active');
+let tabs = document.querySelectorAll('.tab');
+tabs.forEach(tab => {
+tab.classList.remove('active');
+});
+document.getElementById(tabId).classList.add('active');
 
-    let buttons = document.querySelectorAll('.tabButton');
-    buttons.forEach(btn => {
-        btn.classList.remove('active');
-    });
-    element.classList.add('active');
+let buttons = document.querySelectorAll('.tabButton');
+buttons.forEach(btn => {
+btn.classList.remove('active');
+});
+element.classList.add('active');
 }
 </script>
 
