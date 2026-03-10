@@ -618,19 +618,42 @@ My research examines customer-based marketing strategies by leveraging customer 
 </footer>
 
 <script>
-function showTab(tabId, element){
+function showTab(tabId, element = null){
     let tabs = document.querySelectorAll('.tab');
     tabs.forEach(tab => {
         tab.classList.remove('active');
     });
-    document.getElementById(tabId).classList.add('active');
+
+    const targetTab = document.getElementById(tabId);
+    if(targetTab){
+        targetTab.classList.add('active');
+    }
 
     let buttons = document.querySelectorAll('.tabButton');
     buttons.forEach(btn => {
         btn.classList.remove('active');
     });
-    element.classList.add('active');
+
+    if(element){
+        element.classList.add('active');
+    } else {
+        const matchingButton = document.querySelector(`.tabButton[onclick*="${tabId}"]`);
+        if(matchingButton){
+            matchingButton.classList.add('active');
+        }
+    }
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const tab = params.get('tab');
+
+    if(tab && document.getElementById(tab)){
+        showTab(tab);
+    } else {
+        showTab('home');
+    }
+});
 </script>
 
 </body>
