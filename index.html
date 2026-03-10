@@ -230,6 +230,29 @@ footer{
         height:200px;
     }
 }
+    .course-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+gap:16px;
+margin-bottom:20px;
+}
+
+.course-card{
+display:block;
+background:#f8fbff;
+border-left:5px solid #0055a5;
+padding:18px;
+border-radius:10px;
+text-decoration:none;
+color:#003366;
+font-weight:600;
+transition:all 0.2s ease;
+}
+
+.course-card:hover{
+background:#eaf2fb;
+transform:translateY(-2px);
+}
 </style>
 </head>
 
@@ -323,13 +346,19 @@ footer{
             <h2>Teaching</h2>
 
             <h3>Courses Taught</h3>
-           <ul>
-<li><a href="digital-marketing.html">Digital Marketing</a></li>
-<li><a href="marketing-analytics.html">Marketing Analytics</a></li>
-<li><a href="quantitative-marketing-strategy.html">Quantitative Marketing Strategy</a></li>
-<li><a href="marketing-research.html">Marketing Research</a></li>
-<li><a href="principles-of-marketing.html">Principles of Marketing</a></li>
-</ul>
+          <div class="course-grid">
+
+<a href="digital-marketing.html" class="course-card">Digital Marketing</a>
+
+<a href="marketing-analytics.html" class="course-card">Marketing Analytics</a>
+
+<a href="quantitative-marketing-strategy.html" class="course-card">Quantitative Marketing Strategy</a>
+
+<a href="marketing-research.html" class="course-card">Marketing Research</a>
+
+<a href="principles-of-marketing.html" class="course-card">Principles of Marketing</a>
+
+</div>
 
             <p>
                 My teaching emphasizes experiential learning and real-world applications of marketing concepts through data analysis, digital tools, and case studies. My classes are designed to be forward-looking and accessible to students from a wide range of backgrounds.
