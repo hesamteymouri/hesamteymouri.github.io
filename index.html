@@ -42,7 +42,7 @@ margin-left:auto;
 margin-right:auto;
 }
     
-    header::after{
+header::after{
 content:"";
 position:absolute;
 bottom:0;
@@ -104,6 +104,15 @@ nav button.active{
     border-radius:16px;
     padding:35px;
     box-shadow:0 8px 24px rgba(0,0,0,0.08);
+}
+
+.home-section{
+    margin-top:28px;
+}
+
+.home-section p{
+    font-size:17px;
+    margin-bottom:0;
 }
 
 h2{
@@ -243,7 +252,8 @@ footer{
         height:200px;
     }
 }
-    .course-grid{
+
+.course-grid{
 display:grid;
 grid-template-columns:1fr;
 gap:16px;
@@ -293,7 +303,6 @@ transform:translateY(-2px);
                     <p>
                         Welcome to my academic website. I study how emerging technologies such as artificial intelligence shape customer experiences. My research provides managerial implications built on deep theoretical foundations and rigorous methods.
                     </p>
-                   
 
                     <div class="button-group">
                         <a href="#">Download CV</a>
@@ -305,32 +314,30 @@ transform:translateY(-2px);
                     <img src="profile.jpg" alt="Hesam Teymouri Athar">
                 </div>
             </div>
+        </div>
 
-            <div class="highlight-grid">
-                <div class="card">
-                    <h3>Research Interests</h3>
-                    <p>Consumer–Technology Interactions (AI Systems, Service Technologies, Digital Platforms); Retail and Service Experience Design; Customer Dissatisfaction.</p>
-                </div>
+        <div class="section-box home-section">
+            <h2>Research Interests</h2>
+            <p>Consumer–Technology Interactions (AI Systems, Service Technologies, Digital Platforms); Retail and Service Experience Design; Customer Dissatisfaction.</p>
+        </div>
 
-                <div class="card">
-                    <h3>Teaching Approach</h3>
-                    <p>Experiential, future-oriented, and accessible teaching that connects concepts to real-world marketing problems.</p>
-                </div>
+        <div class="section-box home-section">
+            <h2>Teaching Approach</h2>
+            <p>Experiential, future-oriented, and accessible teaching that connects concepts to real-world marketing problems.</p>
+        </div>
 
-                <div class="card">
-                    <h3>Methods</h3>
-                    <p>Behavioral experiments, Regression-Based Modeling, Difference-in-Difference, Mixed-Effects Modeling.</p>
-                </div>
-            </div>
+        <div class="section-box home-section">
+            <h2>Methods</h2>
+            <p>Behavioral experiments, Regression-Based Modeling, Difference-in-Difference, Mixed-Effects Modeling.</p>
         </div>
     </div>
 
     <div id="research" class="tab">
         <div class="section-box">
             <h2>Research</h2>
- <p>
-                        My research focuses on consumer–technology interactions, retail and service experience design, and customer dissatisfaction and well-being.
-                    </p>
+            <p>
+                My research focuses on consumer–technology interactions, retail and service experience design, and customer dissatisfaction and well-being.
+            </p>
             
             <div class="card">
                 <h3>Agentic AI in the Service Frontline</h3>
@@ -358,26 +365,18 @@ transform:translateY(-2px);
     <div id="teaching" class="tab">
         <div class="section-box">
             <h2>Teaching</h2>
-<p>
+            <p>
                 My teaching emphasizes experiential learning and real-world applications of marketing concepts through data analysis, digital tools, and case studies. My classes are designed to be forward-looking and accessible to students from a wide range of backgrounds.
             </p>
             
             <h3>Courses Taught</h3>
-          <div class="course-grid">
-
-<a href="digital-marketing.html" class="course-card">Digital Marketing</a>
-
-<a href="marketing-analytics.html" class="course-card">Marketing Analytics</a>
-
-<a href="quantitative-marketing-strategy.html" class="course-card">Quantitative Marketing Strategy</a>
-
-<a href="marketing-research.html" class="course-card">Marketing Research</a>
-
-<a href="principles-of-marketing.html" class="course-card">Principles of Marketing</a>
-
-</div>
-
-            
+            <div class="course-grid">
+                <a href="digital-marketing.html" class="course-card">Digital Marketing</a>
+                <a href="marketing-analytics.html" class="course-card">Marketing Analytics</a>
+                <a href="quantitative-marketing-strategy.html" class="course-card">Quantitative Marketing Strategy</a>
+                <a href="marketing-research.html" class="course-card">Marketing Research</a>
+                <a href="principles-of-marketing.html" class="course-card">Principles of Marketing</a>
+            </div>
         </div>
     </div>
 
