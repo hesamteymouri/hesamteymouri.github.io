@@ -1,48 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hesam Teymouri Athar</title>
 
 <style>
+*{
+    box-sizing:border-box;
+}
 
 body{
     font-family: Arial, sans-serif;
     margin:0;
-    background:#f5f5f5;
+    background:#eef2f7;
+    color:#1f2d3d;
+    line-height:1.6;
 }
 
 header{
-    background:#003366;
+    background:linear-gradient(135deg, #003366, #0055a5);
     color:white;
-    padding:20px;
+    padding:60px 20px 40px;
     text-align:center;
 }
 
+header h1{
+    margin:0;
+    font-size:42px;
+    font-weight:700;
+}
+
+header p{
+    margin-top:12px;
+    font-size:18px;
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
 nav{
-    background:#0055a5;
-    padding:10px;
+    background:white;
+    padding:14px 10px;
     text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 nav button{
     background:none;
     border:none;
-    color:white;
+    color:#003366;
     font-size:16px;
-    margin:0 15px;
+    font-weight:600;
+    margin:0 12px;
     cursor:pointer;
+    padding:10px 14px;
+    border-radius:6px;
+    transition:all 0.2s ease;
 }
 
 nav button:hover{
-    text-decoration:underline;
+    background:#e6eef8;
 }
 
 .content{
-    padding:40px;
-    max-width:900px;
-    margin:auto;
-    background:white;
+    padding:40px 20px;
+    max-width:1100px;
+    margin:40px auto;
 }
 
 .tab{
@@ -53,101 +80,279 @@ nav button:hover{
     display:block;
 }
 
-h2{
-    color:#003366;
+.section-box{
+    background:white;
+    border-radius:16px;
+    padding:35px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.08);
 }
 
+h2{
+    color:#003366;
+    margin-top:0;
+    margin-bottom:20px;
+    font-size:30px;
+}
+
+h3{
+    color:#004b8d;
+    margin-bottom:8px;
+}
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    flex:2;
+    min-width:280px;
+}
+
+.hero-text p{
+    font-size:17px;
+    margin-bottom:18px;
+}
+
+.hero-image{
+    flex:1;
+    min-width:220px;
+    text-align:center;
+}
+
+.hero-image img{
+    width:240px;
+    height:240px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid #dce7f5;
+    box-shadow:0 6px 20px rgba(0,0,0,0.12);
+}
+
+.button-group{
+    margin-top:25px;
+}
+
+.button-group a{
+    display:inline-block;
+    background:#0055a5;
+    color:white;
+    text-decoration:none;
+    padding:11px 18px;
+    border-radius:8px;
+    margin-right:10px;
+    margin-bottom:10px;
+    font-weight:600;
+    transition:background 0.2s ease;
+}
+
+.button-group a:hover{
+    background:#003366;
+}
+
+.highlight-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.card{
+    background:#f8fbff;
+    border-left:5px solid #0055a5;
+    border-radius:12px;
+    padding:22px;
+}
+
+.card p{
+    margin-bottom:0;
+}
+
+ul{
+    padding-left:22px;
+}
+
+.contact-links a{
+    color:#0055a5;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.contact-links a:hover{
+    text-decoration:underline;
+}
+
+footer{
+    text-align:center;
+    padding:30px 20px 40px;
+    color:#5a6b7c;
+    font-size:14px;
+}
+
+@media (max-width: 768px){
+    header h1{
+        font-size:32px;
+    }
+
+    header p{
+        font-size:16px;
+    }
+
+    nav button{
+        display:inline-block;
+        margin:6px 6px;
+    }
+
+    .section-box{
+        padding:25px;
+    }
+
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .hero-text{
+        text-align:center;
+    }
+
+    .hero-image img{
+        width:200px;
+        height:200px;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>Hesam Teymouri Athar</h1>
-<p>Marketing Researcher | Practical Teacher</p>
+    <h1>Hesam Teymouri Athar</h1>
+    <p>Marketing Researcher | Practical Teacher</p>
 </header>
 
 <nav>
-<button onclick="showTab('home')">Home</button>
-<button onclick="showTab('research')">Research</button>
-<button onclick="showTab('teaching')">Teaching</button>
-<button onclick="showTab('contact')">Contact</button>
+    <button onclick="showTab('home')">Home</button>
+    <button onclick="showTab('research')">Research</button>
+    <button onclick="showTab('teaching')">Teaching</button>
+    <button onclick="showTab('contact')">Contact</button>
 </nav>
 
 <div class="content">
 
-<div id="home" class="tab active">
-<h2>Welcome</h2>
-<p>
-Welcome to my academic website. I study how emerging technologies such as artificial intelligence shape customer experiences. My research provides managerial implications built on deep theoretical foundations and rigorous methods.
-</p>
-<p>
-My research focuses on Consumer–Technology Interactions (AI Systems, Service Technologies, Digital Platforms), Retail and Service Experience Design, Customer Dissatisfaction and Well-Being.
-</p>
+    <div id="home" class="tab active">
+        <div class="section-box">
+            <div class="hero">
+                <div class="hero-text">
+                    <h2>Welcome</h2>
+                    <p>
+                        Welcome to my academic website. I study how emerging technologies such as artificial intelligence shape customer experiences. My research provides managerial implications built on deep theoretical foundations and rigorous methods.
+                    </p>
+                    <p>
+                        My research focuses on consumer–technology interactions, retail and service experience design, and customer dissatisfaction and well-being.
+                    </p>
+
+                    <div class="button-group">
+                        <a href="#">Download CV</a>
+                        <a href="#">Google Scholar</a>
+                        <a href="mailto:hteymouri@newhaven.edu">Email Me</a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="profile.jpg" alt="Hesam Teymouri Athar">
+                </div>
+            </div>
+
+            <div class="highlight-grid">
+                <div class="card">
+                    <h3>Research Areas</h3>
+                    <p>AI systems, service technologies, digital platforms, and customer decision-making.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Teaching Approach</h3>
+                    <p>Experiential, practical, and accessible teaching that connects concepts to real-world marketing problems.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Methods</h3>
+                    <p>Behavioral experiments, survey research, quantitative analysis, and theory-driven empirical work.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="research" class="tab">
+        <div class="section-box">
+            <h2>Research</h2>
+
+            <div class="card">
+                <h3>Agentic AI in the Service Frontline</h3>
+                <p>
+                    Examining how AI-based service decisions influence consumer perceptions of control, fairness, and satisfaction.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Self-Service Technologies</h3>
+                <p>
+                    Investigating why certain customers resist self-service technologies and how entitlement affects adoption.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Prosocial Consumer Behavior</h3>
+                <p>
+                    Studying how retail donation design influences charitable giving and consumer engagement.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="teaching" class="tab">
+        <div class="section-box">
+            <h2>Teaching</h2>
+
+            <h3>Courses Taught</h3>
+            <ul>
+                <li>Principles of Marketing</li>
+                <li>Digital Marketing</li>
+                <li>Marketing Research</li>
+                <li>Marketing Analytics</li>
+            </ul>
+
+            <p>
+                My teaching emphasizes experiential learning and real-world applications of marketing concepts through data analysis, digital tools, and case studies. My classes are designed to be forward-looking and accessible to students from a wide range of backgrounds.
+            </p>
+        </div>
+    </div>
+
+    <div id="contact" class="tab">
+        <div class="section-box contact-links">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:hteymouri@newhaven.edu">hteymouri@newhaven.edu</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/hesam-teymouri-athar/" target="_blank">linkedin.com/in/hesam-teymouri-athar/</a></p>
+        </div>
+    </div>
+
 </div>
 
-<div id="research" class="tab">
-<h2>Research</h2>
-
-<h3>Agentic AI in the Service Frontline</h3>
-<p>
-Examining how AI-based service decisions influence consumer perceptions of control, fairness, and satisfaction.
-</p>
-
-<h3>Self-Service Technologies</h3>
-<p>
-Investigating why certain customers resist self-service technologies and how entitlement affects adoption.
-</p>
-
-<h3>Prosocial Consumer Behavior</h3>
-<p>
-Studying how retail donation design influences charitable giving and consumer engagement.
-</p>
-
-</div>
-
-<div id="teaching" class="tab">
-<h2>Teaching</h2>
-
-<h3>Courses Taught</h3>
-
-<ul>
-<li>Principles of Marketing</li>
-<li>Digital Marketing</li>
-<li>Marketing Research</li>
-<li>Marketing Analytics</li>
-</ul>
-
-<p>
-My teaching emphasizes experiential learning and real-world applications of marketing concepts through data analysis, digital tools, and case studies. My classes are designed forward looking and accesible for a wide range of students with different backgrounds.
-</p>
-
-</div>
-
-<div id="contact" class="tab">
-<h2>Contact</h2>
-
-<p>Email: hteymouri[at]newhaven.edu</p>
-<p>LinkedIn: linkedin.com/in/hesam-teymouri-athar/</p>
-
-</div>
-
-</div>
+<footer>
+    © 2026 Hesam Teymouri Athar
+</footer>
 
 <script>
-
 function showTab(tabId){
-
-let tabs=document.querySelectorAll('.tab');
-
-tabs.forEach(tab=>{
-tab.classList.remove('active');
-});
-
-document.getElementById(tabId).classList.add('active');
-
+    let tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+    document.getElementById(tabId).classList.add('active');
 }
-
 </script>
 
 </body>
