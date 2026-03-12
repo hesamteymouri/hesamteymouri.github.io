@@ -57,7 +57,9 @@ nav{
     background:white;
     padding:14px 10px;
     text-align:center;
-    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.05),
+        0 12px 28px rgba(0,0,0,0.06);
     position:sticky;
     top:0;
     z-index:1000;
@@ -69,21 +71,24 @@ nav button{
     color:#0B0B45;
     font-size:16px;
     font-weight:600;
-    margin:0 12px;
+    margin:0 10px;
     cursor:pointer;
-    padding:10px 14px;
-    border-radius:6px;
-    transition:all 0.2s ease;
+    padding:10px 16px;
+    border-radius:8px;
+    transition:all 0.25s ease;
+    position:relative;
 }
 
 nav button:hover{
-    background:#0B0B45;
-    color:white;
+    background:rgba(11,11,69,0.08);
+    color:#0B0B45;
+    box-shadow:0 4px 10px rgba(0,0,0,0.06);
 }
 
 nav button.active{
     background:#0B0B45;
     color:white;
+    box-shadow:0 6px 14px rgba(0,0,0,0.12);
 }
 
 .content{
