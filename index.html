@@ -200,7 +200,7 @@ h3{
 }
 
 .button-group{
-    margin-top:80px;
+    margin-top:28px;
 }
 
 .button-group a{
@@ -284,6 +284,98 @@ h3{
 .card{
     cursor:pointer;
 }
+    .home-box{
+    padding-top:42px;
+    padding-bottom:32px;
+}
+
+.hero-modern{
+    display:grid;
+    grid-template-columns:minmax(0, 1.2fr) 120px minmax(320px, 430px);
+    align-items:end;
+    gap:34px;
+    margin-bottom:34px;
+}
+
+.hero-kicker{
+    display:inline-block;
+    margin-bottom:16px;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:#0B0B45;
+    background:rgba(11,11,69,0.06);
+    padding:6px 10px;
+    border-radius:999px;
+}
+
+.hero-modern .hero-text{
+    min-width:0;
+}
+
+.hero-modern .hero-text h2{
+    font-size:44px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero-modern .hero-text p{
+    font-size:20px;
+    line-height:1.8;
+    max-width:640px;
+    margin-bottom:0;
+}
+
+.hero-side{
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    height:100%;
+}
+
+.hero-quicklinks{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    padding-bottom:10px;
+}
+
+.hero-quicklinks a{
+    color:#0B0B45;
+    text-decoration:none;
+    font-weight:600;
+    font-size:15px;
+    writing-mode:vertical-rl;
+    transform:rotate(180deg);
+    letter-spacing:0.04em;
+    transition:opacity 0.2s ease, transform 0.2s ease;
+}
+
+.hero-quicklinks a:hover{
+    opacity:0.7;
+    transform:rotate(180deg) translateY(-2px);
+}
+
+.hero-modern .hero-image{
+    min-width:0;
+    margin-top:0;
+    display:flex;
+    justify-content:flex-end;
+    align-items:flex-end;
+}
+
+.hero-modern .hero-image img{
+    width:100%;
+    max-width:430px;
+    height:auto;
+    display:block;
+}
+
+.home-highlights{
+    margin-top:10px;
+}
+    
 
 .contact-links a{
     color:#0B0B45;
@@ -619,44 +711,54 @@ footer{
 
 <div class="content">
 
-    <div id="home" class="tab active">
-        <div class="section-box">
-            <div class="hero">
-                <div class="hero-text">
-                    <h2>Welcome!</h2>
-                    <p>
-                        Welcome to my academic website. I study how emerging technologies such as artificial intelligence shape customer experiences. My research provides managerial implications built on deep theoretical foundations and rigorous methods.
-                    </p>
+<div id="home" class="tab active">
+    <div class="section-box home-box">
+        <div class="hero hero-modern">
+            
+            <div class="hero-text">
+                <div class="hero-kicker">Marketing Scholar</div>
+                <h2>Welcome!</h2>
+                <p>
+                    Welcome to my academic website. I study how emerging technologies such as artificial intelligence shape customer experiences. My research provides managerial implications built on deep theoretical foundations and rigorous methods.
+                </p>
 
-                    <div class="button-group">
-                        <a href="#">Download CV</a>
-                        <a href="https://scholar.google.com/citations?user=7q1oMCUAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
-                    </div>
-                </div>
-
-                <div class="hero-image">
-                    <img src="profile.jpg" alt="Hesam Teymouri Athar">
+                <div class="button-group">
+                    <a href="#">Download CV</a>
+                    <a href="https://scholar.google.com/citations?user=7q1oMCUAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
                 </div>
             </div>
 
-            <div class="highlight-grid">
-                <a href="index.html?tab=research" class="card">
-                    <h3>Research Interests</h3>
-                    <p>Consumer–Technology Interactions (AI Systems, Service Technologies, Digital Platforms); Retail and Service Experience Design; Customer Dissatisfaction.</p>
-                </a>
-                
-               <a href="index.html?tab=teaching" class="card">
-                   <h3>Teaching Approach</h3>
-                   <p>Experiential, future-oriented, and accessible teaching that connects concepts to real-world marketing problems.</p>
-               </a>
-
-                <div class="card">
-                    <h3>Methods</h3>
-                    <p>Behavioral experiments, Regression-Based Modeling, Difference-in-Difference, Conjoint-Analysis, Mixed-Effects Modeling.</p>
+            <div class="hero-side">
+                <div class="hero-quicklinks">
+                    <a href="index.html?tab=research">Research</a>
+                    <a href="index.html?tab=teaching">Teaching</a>
+                    <a href="index.html?tab=contact">Contact</a>
                 </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="profile.jpg" alt="Hesam Teymouri Athar">
+            </div>
+        </div>
+
+        <div class="highlight-grid home-highlights">
+            <a href="index.html?tab=research" class="card">
+                <h3>Research Interests</h3>
+                <p>Consumer–Technology Interactions (AI Systems, Service Technologies, Digital Platforms); Retail and Service Experience Design; Customer Dissatisfaction.</p>
+            </a>
+            
+            <a href="index.html?tab=teaching" class="card">
+                <h3>Teaching Approach</h3>
+                <p>Experiential, future-oriented, and accessible teaching that connects concepts to real-world marketing problems.</p>
+            </a>
+
+            <div class="card">
+                <h3>Methods</h3>
+                <p>Behavioral experiments, Regression-Based Modeling, Difference-in-Difference, Conjoint-Analysis, Mixed-Effects Modeling.</p>
             </div>
         </div>
     </div>
+</div>
 
     <div id="research" class="tab">
         <div class="section-box">
