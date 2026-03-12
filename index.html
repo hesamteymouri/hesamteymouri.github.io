@@ -791,6 +791,9 @@ function showTab(tabId, element = null){
             matchingButton.classList.add('active');
         }
     }
+
+    const newUrl = `${window.location.pathname}?tab=${tabId}`;
+    window.history.replaceState({}, '', newUrl);
 }
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -804,6 +807,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 </script>
-
+    
 </body>
 </html>
