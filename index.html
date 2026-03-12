@@ -217,20 +217,22 @@ h3{
 
 .card{
     background:white;
-    border:2px solid #0B0B45;
-    border-radius:12px;
-    padding:22px;
+    border:1px solid rgba(0,0,0,0.06);
+    border-top:4px solid #0B0B45;
+    border-radius:16px;
+    padding:24px;
     color:#24384d;
     transition:all 0.25s ease;
+    box-shadow:0 8px 22px rgba(0,0,0,0.06);
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 16px 32px rgba(0,0,0,0.12);
 }
 
 .card h3{
     color:#0B0B45;
-}
-
-.card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 8px 18px rgba(11,11,69,0.35);
 }
 
 .card p{
