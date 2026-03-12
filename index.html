@@ -288,7 +288,72 @@ footer{
     color:#5a6b7c;
     font-size:14px;
 }
+.contact-intro{
+    margin-bottom:28px;
+    font-size:18px;
+    color:#31465a;
+}
 
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:22px;
+    margin-top:24px;
+}
+
+.contact-card{
+    background:linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+    border:2px solid #bfc9d6;
+    border-radius:16px;
+    padding:24px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.05);
+    transition:all 0.25s ease;
+}
+
+.contact-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 14px 30px rgba(0,0,0,0.12);
+    border-color:#0B0B45;
+}
+
+.contact-label{
+    display:inline-block;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:#0B0B45;
+    background:rgba(11,11,69,0.08);
+    padding:6px 10px;
+    border-radius:999px;
+    margin-bottom:14px;
+}
+
+.contact-card h3{
+    margin-top:0;
+    margin-bottom:10px;
+    font-size:22px;
+    color:#0B0B45;
+}
+
+.contact-card p{
+    margin:0;
+    color:#3b4b5c;
+    line-height:1.7;
+    font-size:16px;
+}
+
+.contact-card a{
+    color:#0B0B45;
+    text-decoration:none;
+    font-weight:600;
+    word-break:break-word;
+}
+
+.contact-card a:hover{
+    text-decoration:underline;
+}
+    
 /* Research Section */
 .research-intro{
     margin-bottom:30px;
@@ -656,14 +721,45 @@ My research examines customer-based marketing strategies by leveraging customer 
         </div>
     </div>
 
-    <div id="contact" class="tab">
-        <div class="section-box contact-links">
-            <h2>Contact</h2>
-            <p>Email: hteymouri[at]newhaven.edu</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/hesam-teymouri-athar/" target="_blank">linkedin.com/in/hesam-teymouri-athar/</a></p>
-            <p>Faculty Web Page: <a href="https://www.newhaven.edu/faculty-staff-profiles/hesam-teymouri.php/" target="_blank">www.newhaven.edu/faculty-staff-profiles/hesam-teymouri.php/</a></p>
+   <div id="contact" class="tab">
+    <div class="section-box">
+        <h2>Contact</h2>
+
+        <p class="contact-intro">
+            Please feel free to reach out regarding research, teaching, or collaboration opportunities.
+        </p>
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+                <span class="contact-label">Email</span>
+                <h3>Email</h3>
+                <p>hteymouri[at]newhaven.edu</p>
+            </div>
+
+            <div class="contact-card">
+                <span class="contact-label">Professional Profile</span>
+                <h3>LinkedIn</h3>
+                <p>
+                    <a href="https://www.linkedin.com/in/hesam-teymouri-athar/" target="_blank">
+                        linkedin.com/in/hesam-teymouri-athar/
+                    </a>
+                </p>
+            </div>
+
+            <div class="contact-card">
+                <span class="contact-label">Institutional Page</span>
+                <h3>Faculty Web Page</h3>
+                <p>
+                    <a href="https://www.newhaven.edu/faculty-staff-profiles/hesam-teymouri.php/" target="_blank">
+                        www.newhaven.edu/faculty-staff-profiles/hesam-teymouri.php/
+                    </a>
+                </p>
+            </div>
+
         </div>
     </div>
+</div>
 
 </div>
 
