@@ -48,7 +48,7 @@ background:#e8e8f5;
 /* ---------- COURSE HEADER ---------- */
 
 .course-header{
-background:linear-gradient(135deg,#0B0B45,#0B0B45);
+background:linear-gradient(135deg,#0B0B45,#162066);
 color:white;
 text-align:center;
 padding:70px 20px 60px;
@@ -62,7 +62,7 @@ font-size:42px;
 .course-header p{
 margin-top:12px;
 font-size:18px;
-max-width:700px;
+max-width:760px;
 margin-left:auto;
 margin-right:auto;
 }
@@ -111,6 +111,10 @@ background:#f8fbff;
 border-left:5px solid #0B0B45;
 border-radius:12px;
 padding:20px;
+}
+
+.card p{
+margin-bottom:0;
 }
 
 /* ---------- COURSE MATERIALS ---------- */
@@ -167,6 +171,19 @@ font-weight:600;
 text-decoration:underline;
 }
 
+@media (max-width: 640px){
+.course-header h1{
+font-size:34px;
+}
+.section-box{
+padding:24px;
+}
+nav a{
+display:inline-block;
+margin:4px 6px;
+}
+}
+
 </style>
 </head>
 
@@ -182,7 +199,7 @@ text-decoration:underline;
 <div class="course-header">
 <h1>Marketing Research</h1>
 <p>
-Using data, statistical analysis, and modern analytical tools to support marketing decision making.
+Designing and using research to understand markets, measure customer insights, and support evidence-based marketing decisions.
 </p>
 </div>
 
@@ -192,15 +209,15 @@ Using data, statistical analysis, and modern analytical tools to support marketi
 <h2>Course Description</h2>
 
 <p>
-Businesses rely on customers to generate value and sustain growth. Marketing analytics refers to data-driven approaches that use customer information to guide decisions related to acquiring, serving, developing, and retaining customers.
+This course introduces students to the theory and practice of marketing research and its role in managerial decision making. Students learn how organizations use research to identify problems, evaluate opportunities, understand customers, and support strategic and tactical marketing decisions.
 </p>
 
 <p>
-However, customer data rarely provide a complete picture of the marketplace. Important elements such as customer preferences, willingness to pay, or the likelihood that a customer may discontinue using a product are often not directly observable in available datasets. In addition, datasets typically exclude potential customers who have not yet interacted with the firm. As a result, effective marketing analytics combines data with marketing theory, domain knowledge, statistical techniques, and analytical models to generate insights and support strategic business decisions.
+The course covers the full marketing research process, including problem formulation, exploratory research, secondary data analysis, qualitative and quantitative research design, measurement and scaling, questionnaire design, sampling, data collection, statistical analysis, and communication of research findings.
 </p>
 
 <p>
-This course emphasizes hands-on learning through data analysis and coding. Students work with real datasets and analytical tools to explore customer behavior, evaluate marketing performance, and generate data-driven insights. The course introduces programming in R and exposes students to a range of analytical techniques used in modern marketing analytics.
+Emphasis is placed on the practical application of marketing research methods to real business problems. Students complete a semester-long research project in which they design and conduct a marketing research study from problem definition to final report. Basic statistical concepts commonly used in marketing research, including sampling distributions, normal distribution, hypothesis testing, correlation, and regression, are introduced with emphasis on interpretation and managerial relevance.
 </p>
 
 </div>
@@ -209,12 +226,14 @@ This course emphasizes hands-on learning through data analysis and coding. Stude
 <h2>Course Objectives</h2>
 
 <ul>
-<li>Understand the role of analytics in marketing decision making</li>
-<li>Analyze marketing datasets to identify patterns and customer insights</li>
-<li>Apply statistical and analytical models to marketing problems</li>
-<li>Use tools such as R, Python, Excel, and AI-assisted analytics tools</li>
-<li>Interpret analytical results and translate them into marketing strategy</li>
-<li>Communicate insights through data visualization and analytical reports</li>
+<li>Understand the role of marketing research in managerial decision making</li>
+<li>Formulate marketing problems and translate them into researchable questions and objectives</li>
+<li>Identify and evaluate appropriate sources of primary and secondary data</li>
+<li>Design exploratory, descriptive, and causal research studies</li>
+<li>Develop questionnaires and measurement scales that are reliable and valid</li>
+<li>Apply sampling and data collection principles in a marketing context</li>
+<li>Interpret basic statistical results and translate them into managerial insights</li>
+<li>Communicate research findings clearly through written reports and presentations</li>
 </ul>
 
 </div>
@@ -225,48 +244,48 @@ This course emphasizes hands-on learning through data analysis and coding. Stude
 <div class="highlight-grid">
 
 <div class="card">
+<h3>Problem Formulation</h3>
+<p>Students learn how to move from a broad managerial issue to a clearly defined research problem, research objectives, and actionable research questions.</p>
+</div>
+
+<div class="card">
+<h3>Exploratory Research</h3>
+<p>Students use literature searches, focus groups, interviews, and other exploratory methods to better understand marketing problems before designing formal research.</p>
+</div>
+
+<div class="card">
+<h3>Secondary Data Analysis</h3>
+<p>Students evaluate internal and external sources of data and learn how existing information can support managerial decisions and sharpen research design.</p>
+</div>
+
+<div class="card">
+<h3>Survey & Questionnaire Design</h3>
+<p>Students design effective data collection instruments, write clear questions, reduce wording bias, and structure questionnaires for reliable measurement.</p>
+</div>
+
+<div class="card">
+<h3>Measurement & Scaling</h3>
+<p>Students work with nominal, ordinal, interval, and ratio scales and learn how reliability, validity, and measurement error affect research quality.</p>
+</div>
+
+<div class="card">
+<h3>Sampling & Data Collection</h3>
+<p>Students learn how to define target populations, choose sampling methods, consider sample size, and understand sources of sampling and response error.</p>
+</div>
+
+<div class="card">
 <h3>Marketing Data Analysis</h3>
-<p>Students work with real transactional and behavioral datasets to explore customer behavior, clean data, and identify patterns that inform marketing decisions.</p>
+<p>Students prepare and analyze research data using summary statistics, visualizations, and basic inferential tools commonly used in marketing research.</p>
 </div>
 
 <div class="card">
-<h3>Customer Segmentation & Targeting</h3>
-<p>Students learn how firms identify distinct customer segments using clustering methods and behavioral metrics such as recency, frequency, and monetary value (RFM).</p>
+<h3>Hypothesis Testing</h3>
+<p>Students are introduced to normal distribution, p-values, statistical significance, correlation, and regression with emphasis on interpretation rather than mathematical derivation.</p>
 </div>
 
 <div class="card">
-<h3>Predictive Marketing Analytics</h3>
-<p>Students build statistical models to predict outcomes such as customer churn and evaluate factors that influence customer retention.</p>
-</div>
-
-<div class="card">
-<h3>Choice Modeling & Marketing Experiments</h3>
-<p>Students analyze how product attributes influence consumer decisions and learn how firms use A/B testing and experimental design to evaluate marketing strategies.</p>
-</div>
-
-<div class="card">
-<h3>Customer Lifetime Value & Retention Analytics</h3>
-<p>Students estimate customer lifetime value (CLV), analyze repeat purchasing behavior, and evaluate strategies for long-term customer relationship management.</p>
-</div>
-
-<div class="card">
-<h3>Market Basket & Retail Analytics</h3>
-<p>Students use association rule mining to identify products frequently purchased together and understand how retailers use these insights for cross-selling and recommendation systems.</p>
-</div>
-
-<div class="card">
-<h3>Programming for Marketing Analytics</h3>
-<p>Students gain hands-on experience using R for data cleaning, statistical modeling, visualization, and applied marketing analytics.</p>
-</div>
-
-<div class="card">
-<h3>Data Visualization & Communication</h3>
-<p>Students learn how to translate analytical results into clear visualizations and managerial insights that support data-driven marketing decisions.</p>
-</div>
-
-<div class="card">
-<h3>AI-Assisted Analytics</h3>
-<p>Students learn how modern AI tools can support exploratory analysis, coding workflows, and insight generation in marketing analytics projects.</p>
+<h3>Research Reporting</h3>
+<p>Students learn how to translate findings into clear managerial implications and present results professionally in both written reports and team presentations.</p>
 </div>
   
 </div>
@@ -277,11 +296,11 @@ This course emphasizes hands-on learning through data analysis and coding. Stude
 <h2>Applied Learning Approach</h2>
 
 <p>
-Students collaborate in teams on hands-on analytics projects that simulate real marketing decision environments. Using statistical models, programming tools (R, Python), and AI-assisted analysis, they analyze marketing datasets, evaluate demand patterns, and generate strategic insights.
+This course emphasizes hands-on, project-based learning. Throughout the semester, students work in teams on a marketing research project that mirrors how research is conducted in practice. Teams define a marketing problem, gather secondary information, develop a research design, create a questionnaire, collect data, analyze results, and present recommendations.
 </p>
 
 <p>
-Assignments emphasize practical problem solving, teamwork, and the ability to translate analytical results into actionable marketing recommendations.
+Individual assignments reinforce core skills such as secondary data search, experiment design, measurement, and question writing. Together, the individual and team components help students build both conceptual understanding and practical research ability.
 </p>
 
 </div>
@@ -294,7 +313,7 @@ Assignments emphasize practical problem solving, teamwork, and the ability to tr
 <div class="resource-item">
 <div>
 <strong>Syllabus</strong><br>
-<span>Course description, schedule, assignments, and expectations</span>
+<span>Course description, schedule, assignments, grading, and expectations</span>
 </div>
 <a class="resource-link" href="files/marketing-research-syllabus.pdf" target="_blank">
 View
@@ -304,7 +323,7 @@ View
 <div class="resource-item">
 <div>
 <strong>Sample Assignments</strong><br>
-<span>Examples of individual and group-bsaed analytics projects and assignments</span>
+<span>Examples of individual and team-based marketing research assignments and project milestones</span>
 </div>
 <a class="resource-link" href="https://github.com/hesamteymouri/Analytics-Teaching/tree/main/Sample%20Assignments" target="_blank">
 Open GitHub
@@ -313,8 +332,8 @@ Open GitHub
 
 <div class="resource-item">
 <div>
-<strong>Analytics Codes & Data Sets</strong><br>
-<span>R scripts, datasets used in the course</span>
+<strong>Course Materials & Data Files</strong><br>
+<span>Slides, datasets, templates, and other materials used in the course</span>
 </div>
 <a class="resource-link" href="https://github.com/hesamteymouri/Analytics-Teaching/tree/main" target="_blank">
 Open GitHub
