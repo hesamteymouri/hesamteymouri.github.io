@@ -1,1 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing Research | Hesam Teymouri Athar</title>
 
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#eef2f7;
+color:#1f2d3d;
+line-height:1.7;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+nav{
+background:white;
+padding:14px 10px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav a{
+text-decoration:none;
+color:#0B0B45;
+font-size:16px;
+font-weight:600;
+margin:0 12px;
+padding:10px 14px;
+border-radius:6px;
+}
+
+nav a:hover{
+background:#e8e8f5;
+}
+
+/* ---------- COURSE HEADER ---------- */
+
+.course-header{
+background:linear-gradient(135deg,#0B0B45,#0B0B45);
+color:white;
+text-align:center;
+padding:70px 20px 60px;
+}
+
+.course-header h1{
+margin:0;
+font-size:42px;
+}
+
+.course-header p{
+margin-top:12px;
+font-size:18px;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* ---------- PAGE CONTENT ---------- */
+
+.content{
+max-width:1000px;
+margin:40px auto;
+padding:0 20px 40px;
+}
+
+.section-box{
+background:white;
+border-radius:16px;
+padding:35px;
+box-shadow:0 8px 24px rgba(0,0,0,0.08);
+margin-bottom:24px;
+}
+
+h2{
+color:#0B0B45;
+margin-top:0;
+margin-bottom:14px;
+font-size:28px;
+}
+
+h3{
+color:#0B0B45;
+margin-bottom:10px;
+}
+
+ul{
+padding-left:22px;
+}
+
+.highlight-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+gap:18px;
+margin-top:20px;
+}
+
+.card{
+background:#f8fbff;
+border-left:5px solid #0B0B45;
+border-radius:12px;
+padding:20px;
+}
+
+/* ---------- COURSE MATERIALS ---------- */
+
+.resource-list{
+display:flex;
+flex-direction:column;
+gap:14px;
+margin-top:10px;
+}
+
+.resource-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:12px;
+padding:16px 18px;
+background:#f8fbff;
+border:1px solid #d9e2f0;
+border-radius:12px;
+}
+
+.resource-item strong{
+color:#0B0B45;
+font-size:17px;
+}
+
+.resource-item span{
+color:#4a5568;
+font-size:15px;
+}
+
+.resource-link{
+text-decoration:none;
+color:#0B0B45;
+font-weight:700;
+white-space:nowrap;
+}
+
+.resource-link:hover{
+text-decoration:underline;
+}
+
+.back-link{
+display:inline-block;
+margin-top:10px;
+text-decoration:none;
+color:#0B0B45;
+font-weight:600;
+}
+
+.back-link:hover{
+text-decoration:underline;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html?tab=home">Home</a>
+<a href="index.html?tab=research">Research</a>
+<a href="index.html?tab=teaching">Teaching</a>
+<a href="index.html?tab=contact">Contact</a>
+</nav>
+
+<div class="course-header">
+<h1>Marketing Research</h1>
+<p>
+Using data, statistical analysis, and modern analytical tools to support marketing decision making.
+</p>
+</div>
+
+<div class="content">
+
+<div class="section-box">
+<h2>Course Description</h2>
+
+<p>
+Businesses rely on customers to generate value and sustain growth. Marketing analytics refers to data-driven approaches that use customer information to guide decisions related to acquiring, serving, developing, and retaining customers.
+</p>
+
+<p>
+However, customer data rarely provide a complete picture of the marketplace. Important elements such as customer preferences, willingness to pay, or the likelihood that a customer may discontinue using a product are often not directly observable in available datasets. In addition, datasets typically exclude potential customers who have not yet interacted with the firm. As a result, effective marketing analytics combines data with marketing theory, domain knowledge, statistical techniques, and analytical models to generate insights and support strategic business decisions.
+</p>
+
+<p>
+This course emphasizes hands-on learning through data analysis and coding. Students work with real datasets and analytical tools to explore customer behavior, evaluate marketing performance, and generate data-driven insights. The course introduces programming in R and exposes students to a range of analytical techniques used in modern marketing analytics.
+</p>
+
+</div>
+
+<div class="section-box">
+<h2>Course Objectives</h2>
+
+<ul>
+<li>Understand the role of analytics in marketing decision making</li>
+<li>Analyze marketing datasets to identify patterns and customer insights</li>
+<li>Apply statistical and analytical models to marketing problems</li>
+<li>Use tools such as R, Python, Excel, and AI-assisted analytics tools</li>
+<li>Interpret analytical results and translate them into marketing strategy</li>
+<li>Communicate insights through data visualization and analytical reports</li>
+</ul>
+
+</div>
+
+<div class="section-box">
+<h2>What Students Learn</h2>
+
+<div class="highlight-grid">
+
+<div class="card">
+<h3>Marketing Data Analysis</h3>
+<p>Students work with real transactional and behavioral datasets to explore customer behavior, clean data, and identify patterns that inform marketing decisions.</p>
+</div>
+
+<div class="card">
+<h3>Customer Segmentation & Targeting</h3>
+<p>Students learn how firms identify distinct customer segments using clustering methods and behavioral metrics such as recency, frequency, and monetary value (RFM).</p>
+</div>
+
+<div class="card">
+<h3>Predictive Marketing Analytics</h3>
+<p>Students build statistical models to predict outcomes such as customer churn and evaluate factors that influence customer retention.</p>
+</div>
+
+<div class="card">
+<h3>Choice Modeling & Marketing Experiments</h3>
+<p>Students analyze how product attributes influence consumer decisions and learn how firms use A/B testing and experimental design to evaluate marketing strategies.</p>
+</div>
+
+<div class="card">
+<h3>Customer Lifetime Value & Retention Analytics</h3>
+<p>Students estimate customer lifetime value (CLV), analyze repeat purchasing behavior, and evaluate strategies for long-term customer relationship management.</p>
+</div>
+
+<div class="card">
+<h3>Market Basket & Retail Analytics</h3>
+<p>Students use association rule mining to identify products frequently purchased together and understand how retailers use these insights for cross-selling and recommendation systems.</p>
+</div>
+
+<div class="card">
+<h3>Programming for Marketing Analytics</h3>
+<p>Students gain hands-on experience using R for data cleaning, statistical modeling, visualization, and applied marketing analytics.</p>
+</div>
+
+<div class="card">
+<h3>Data Visualization & Communication</h3>
+<p>Students learn how to translate analytical results into clear visualizations and managerial insights that support data-driven marketing decisions.</p>
+</div>
+
+<div class="card">
+<h3>AI-Assisted Analytics</h3>
+<p>Students learn how modern AI tools can support exploratory analysis, coding workflows, and insight generation in marketing analytics projects.</p>
+</div>
+  
+</div>
+
+</div>
+
+<div class="section-box">
+<h2>Applied Learning Approach</h2>
+
+<p>
+Students collaborate in teams on hands-on analytics projects that simulate real marketing decision environments. Using statistical models, programming tools (R, Python), and AI-assisted analysis, they analyze marketing datasets, evaluate demand patterns, and generate strategic insights.
+</p>
+
+<p>
+Assignments emphasize practical problem solving, teamwork, and the ability to translate analytical results into actionable marketing recommendations.
+</p>
+
+</div>
+
+<div class="section-box">
+<h2>Course Materials</h2>
+
+<div class="resource-list">
+
+<div class="resource-item">
+<div>
+<strong>Syllabus</strong><br>
+<span>Course description, schedule, assignments, and expectations</span>
+</div>
+<a class="resource-link" href="files/analytics-syllabus.pdf" target="_blank">
+View
+</a>
+</div>
+
+<div class="resource-item">
+<div>
+<strong>Sample Assignments</strong><br>
+<span>Examples of individual and group-bsaed analytics projects and assignments</span>
+</div>
+<a class="resource-link" href="https://github.com/hesamteymouri/Analytics-Teaching/tree/main/Sample%20Assignments" target="_blank">
+Open GitHub
+</a>
+</div>
+
+<div class="resource-item">
+<div>
+<strong>Analytics Codes & Data Sets</strong><br>
+<span>R scripts, datasets used in the course</span>
+</div>
+<a class="resource-link" href="https://github.com/hesamteymouri/Analytics-Teaching/tree/main" target="_blank">
+Open GitHub
+</a>
+</div>
+
+</div>
+
+</div>
+
+<a href="index.html" class="back-link">← Back to homepage</a>
+
+</div>
+
+</body>
+</html>
