@@ -926,13 +926,56 @@ nav button.active::after { transform: scaleX(1); }
 .contact-row:hover .contact-row-arrow { transform: translateX(3px); }
 
 /* Aside info card */
+.aside-card-wrap {
+  position: relative;
+  padding: 10px;
+  border-radius: 16px;
+  transition: transform 0.35s ease;
+  cursor: default;
+}
+
+.aside-card-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: radial-gradient(ellipse at 30% 30%, rgba(201,168,76,0.28) 0%, rgba(30,38,96,0.45) 55%, rgba(10,14,46,0.0) 100%);
+  filter: blur(8px);
+  z-index: 0;
+  transition: opacity 0.35s ease;
+}
+
+.aside-card-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(201,168,76,0.25);
+  z-index: 2;
+  pointer-events: none;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.aside-card-wrap:hover {
+  transform: translateY(-6px);
+}
+
+.aside-card-wrap:hover::after {
+  border-color: rgba(201,168,76,0.85);
+  box-shadow:
+    0 0 0 3px rgba(201,168,76,0.12),
+    0 0 20px rgba(201,168,76,0.20);
+}
+
+.aside-card-wrap:hover::before { opacity: 1.4; }
+
 .aside-card {
   background: var(--navy);
   color: #fff;
   border-radius: var(--radius-lg);
   padding: 36px 28px;
-  position: sticky;
-  top: 80px;
+  position: relative;
+  z-index: 1;
 }
 
 .aside-card::before {
@@ -943,8 +986,6 @@ nav button.active::after { transform: scaleX(1); }
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
-
-.aside-card { position: relative; }
 
 .aside-card-label {
   font-family: 'DM Mono', monospace;
@@ -1375,10 +1416,12 @@ footer {
       </div>
 
       <div>
-        <div class="aside-card">
-          <span class="aside-card-label">Current Position</span>
-          <h3>Assistant Professor of Marketing</h3>
-          <p>University of New Haven · Pompea College of Business</p>
+        <div class="aside-card-wrap">
+          <div class="aside-card">
+            <span class="aside-card-label">Current Position</span>
+            <h3>Assistant Professor of Marketing</h3>
+            <p>University of New Haven · Pompea College of Business</p>
+          </div>
         </div>
       </div>
 
