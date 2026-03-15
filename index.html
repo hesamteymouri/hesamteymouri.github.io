@@ -690,21 +690,43 @@ nav button.active::after { transform: scaleX(1); }
 .teaching-card::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0;
+  bottom: 0; left: 0; right: 0;
   height: 3px;
-  background: var(--navy);
+  background: linear-gradient(90deg, var(--gold), var(--navy));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
 }
 
+.teaching-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 10% 100%, rgba(201,168,76,0.06) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
 .teaching-card:hover {
-  border-color: rgba(10,14,46,0.25);
+  border-color: rgba(10,14,46,0.22);
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(10,14,46,0.09);
+  box-shadow: 0 12px 40px rgba(10,14,46,0.10);
 }
 
 .teaching-card:hover::before { transform: scaleX(1); }
+.teaching-card:hover::after  { opacity: 1; }
+.teaching-card:hover h3 { color: var(--navy-light); }
+
+.teaching-card h3 {
+  transition: color 0.2s ease;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
 
 .tc-tag {
   font-family: 'DM Mono', monospace;
@@ -726,15 +748,6 @@ nav button.active::after { transform: scaleX(1); }
 }
 
 .tc-dot-warning { background: #f59e0b; }
-
-.teaching-card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--navy);
-  margin-bottom: 12px;
-  line-height: 1.25;
-}
 
 .teaching-card p {
   font-size: 14px;
