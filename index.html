@@ -1396,7 +1396,7 @@ footer {
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 function showTab(tabId, element){
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   const target = document.getElementById(tabId);
@@ -1418,5 +1418,9 @@ window.addEventListener('DOMContentLoaded', () => {
   if(tab && document.getElementById(tab)) showTab(tab);
   else showTab('home');
 
-  // Animate sidebar cards on home tab
-  document.querySelectorAll('.sideba
+  document.querySelectorAll('.sidebar-card').forEach((el, i) => {
+    el.style.animationDelay = `${0.15 + i * 0.08}s`;
+    el.classList.add('fade-in');
+  });
+});
+</script>
