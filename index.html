@@ -394,6 +394,22 @@ nav button.active::after { transform: scaleX(1); }
   transform: translateY(-2px);
 }
 
+.btn-scholar {
+  border: 1.5px solid var(--navy);
+  transition: all 0.3s ease;
+}
+
+.btn-scholar:hover {
+  background: transparent !important;
+  color: var(--navy) !important;
+  transform: translateY(-3px);
+  border-color: var(--gold);
+  box-shadow:
+    0 0 0 3px rgba(201,168,76,0.15),
+    0 0 18px rgba(201,168,76,0.35),
+    0 0 40px rgba(201,168,76,0.15);
+}
+
 .btn-ghost {
   background: transparent;
   color: var(--text-mid);
@@ -1066,7 +1082,48 @@ footer {
   color: rgba(255,255,255,0.35);
 }
 
-/* ── ANIMATIONS ── */
+/* ── GOLD WRAP HOVER ── */
+.gold-wrap {
+  position: relative;
+  display: inline-block;
+  border-radius: 8px;
+  transition: transform 0.35s ease;
+}
+
+.gold-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: radial-gradient(ellipse at 30% 30%, rgba(201,168,76,0.28) 0%, rgba(30,38,96,0.45) 55%, rgba(10,14,46,0.0) 100%);
+  filter: blur(6px);
+  z-index: 0;
+  transition: opacity 0.35s ease;
+}
+
+.gold-wrap::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(201,168,76,0.25);
+  z-index: 2;
+  pointer-events: none;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gold-wrap:hover { transform: translateY(-4px); }
+
+.gold-wrap:hover::after {
+  border-color: rgba(201,168,76,0.85);
+  box-shadow:
+    0 0 0 3px rgba(201,168,76,0.12),
+    0 0 20px rgba(201,168,76,0.20);
+}
+
+.gold-wrap:hover::before { opacity: 1.4; }
+
+.gold-wrap > * { position: relative; z-index: 1; }
 .fade-in {
   animation: fadeUp 0.55s ease both;
 }
@@ -1162,7 +1219,7 @@ footer {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download CV
           </a>
-          <a href="https://scholar.google.com/citations?user=7q1oMCUAAAAJ&hl=en&oi=ao" target="_blank" class="btn btn-secondary">
+          <a href="https://scholar.google.com/citations?user=7q1oMCUAAAAJ&hl=en&oi=ao" target="_blank" class="btn btn-secondary btn-scholar">
             Google Scholar
           </a>
         </div>
