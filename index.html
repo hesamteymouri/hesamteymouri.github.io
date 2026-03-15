@@ -802,11 +802,7 @@ nav button.active::after { transform: scaleX(1); }
 .contact-methods {
   display: flex;
   flex-direction: column;
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
+  gap: 12px;
 }
 
 .contact-row {
@@ -817,10 +813,44 @@ nav button.active::after { transform: scaleX(1); }
   gap: 20px;
   text-decoration: none;
   color: inherit;
-  transition: background 0.15s;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
 }
 
-.contact-row:hover { background: var(--off-white); }
+.contact-row::before {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--navy));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.contact-row::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 10% 100%, rgba(201,168,76,0.06) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.contact-row:hover {
+  border-color: rgba(10,14,46,0.22);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(10,14,46,0.10);
+}
+
+.contact-row:hover::before { transform: scaleX(1); }
+.contact-row:hover::after  { opacity: 1; }
+
+.contact-row:hover .contact-row-label { color: var(--navy-light); }
 
 .contact-icon {
   width: 40px; height: 40px;
