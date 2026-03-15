@@ -4,340 +4,546 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Marketing Research | Hesam Teymouri Athar</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
 
 <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-*{
-box-sizing:border-box;
+:root {
+  --navy: #0a0e2e;
+  --navy-mid: #151a4a;
+  --navy-light: #1e2660;
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --cream: #faf8f3;
+  --off-white: #f4f1ea;
+  --text-dark: #1a1e3a;
+  --text-mid: #3a4060;
+  --text-muted: #6b7290;
+  --border: rgba(10,14,46,0.10);
+  --radius: 4px;
+  --radius-lg: 10px;
 }
 
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#eef2f7;
-color:#1f2d3d;
-line-height:1.7;
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text-dark);
+  line-height: 1.7;
+  font-weight: 400;
 }
 
-/* ---------- NAVIGATION ---------- */
-
-nav{
-background:white;
-padding:14px 10px;
-text-align:center;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
-position:sticky;
-top:0;
-z-index:1000;
+/* ── NAV ── */
+nav {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-nav a{
-text-decoration:none;
-color:#0B0B45;
-font-size:16px;
-font-weight:600;
-margin:0 12px;
-padding:10px 14px;
-border-radius:6px;
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
 }
 
-nav a:hover{
-background:#e8e8f5;
+.nav-wordmark {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-right: auto;
+  padding: 16px 0;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+  text-decoration: none;
 }
 
-/* ---------- COURSE HEADER ---------- */
-
-.course-header{
-background:linear-gradient(135deg,#0B0B45,#162066);
-color:white;
-text-align:center;
-padding:70px 20px 60px;
+nav a.nav-link {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 20px 18px;
+  position: relative;
+  transition: color 0.2s;
+  letter-spacing: 0.01em;
+  display: inline-block;
 }
 
-.course-header h1{
-margin:0;
-font-size:42px;
+nav a.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 18px; right: 18px;
+  height: 2px;
+  background: var(--navy);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
 }
 
-.course-header p{
-margin-top:12px;
-font-size:18px;
-max-width:760px;
-margin-left:auto;
-margin-right:auto;
+nav a.nav-link:hover { color: var(--navy); }
+nav a.nav-link:hover::after { transform: scaleX(0.4); }
+
+/* ── COURSE HEADER ── */
+.course-header {
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
 }
 
-/* ---------- PAGE CONTENT ---------- */
-
-.content{
-max-width:1000px;
-margin:40px auto;
-padding:0 20px 40px;
+.course-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 80% 50%, rgba(201,168,76,0.10) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 10% 20%, rgba(255,255,255,0.04) 0%, transparent 60%);
+  pointer-events: none;
 }
 
-.section-box{
-background:white;
-border-radius:16px;
-padding:35px;
-box-shadow:0 8px 24px rgba(0,0,0,0.08);
-margin-bottom:24px;
+.course-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
-h2{
-color:#0B0B45;
-margin-top:0;
-margin-bottom:14px;
-font-size:28px;
+.course-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 40px 52px;
+  position: relative;
+  z-index: 1;
 }
 
-h3{
-color:#0B0B45;
-margin-bottom:10px;
+.course-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 14px;
 }
 
-ul{
-padding-left:22px;
+.course-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
 }
 
-.highlight-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-gap:18px;
-margin-top:20px;
+.course-header p {
+  font-size: 17px;
+  color: rgba(255,255,255,0.65);
+  max-width: 620px;
+  line-height: 1.65;
+  font-weight: 300;
 }
 
-.card{
-background:#f8fbff;
-border-left:5px solid #0B0B45;
-border-radius:12px;
-padding:20px;
+/* ── LAYOUT ── */
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 48px 40px 60px;
 }
 
-.card p{
-margin-bottom:0;
+/* ── SECTION BOX ── */
+.section-box {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  padding: 36px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 16px rgba(10,14,46,0.05);
 }
 
-/* ---------- COURSE MATERIALS ---------- */
-
-.resource-list{
-display:flex;
-flex-direction:column;
-gap:14px;
-margin-top:10px;
+.section-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 10px;
 }
 
-.resource-item{
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-gap:12px;
-padding:16px 18px;
-background:#f8fbff;
-border:1px solid #d9e2f0;
-border-radius:12px;
+.section-box h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 18px;
+  letter-spacing: -0.3px;
 }
 
-.resource-item strong{
-color:#0B0B45;
-font-size:17px;
+.section-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 8px;
 }
 
-.resource-item span{
-color:#4a5568;
-font-size:15px;
+.section-box p {
+  font-size: 15.5px;
+  color: var(--text-mid);
+  line-height: 1.75;
+  font-weight: 300;
+  margin-bottom: 14px;
 }
 
-.resource-link{
-text-decoration:none;
-color:#0B0B45;
-font-weight:700;
-white-space:nowrap;
+.section-box p:last-child { margin-bottom: 0; }
+
+.section-box ul {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.resource-link:hover{
-text-decoration:underline;
+.section-box ul li {
+  font-size: 15.5px;
+  color: var(--text-mid);
+  line-height: 1.65;
+  font-weight: 300;
 }
 
-.back-link{
-display:inline-block;
-margin-top:10px;
-text-decoration:none;
-color:#0B0B45;
-font-weight:600;
+/* ── HIGHLIGHT GRID ── */
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
 }
 
-.back-link:hover{
-text-decoration:underline;
+.card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
-@media (max-width: 640px){
-.course-header h1{
-font-size:34px;
-}
-.section-box{
-padding:24px;
-}
-nav a{
-display:inline-block;
-margin:4px 6px;
-}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--navy));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(10,14,46,0.09);
+  border-color: rgba(10,14,46,0.2);
+}
+
+.card:hover::before { transform: scaleX(1); }
+
+.card p { margin-bottom: 0; font-size: 14.5px; }
+
+/* ── RESOURCE LIST ── */
+.resource-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.resource-item {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 20px 24px;
+  transition: background 0.15s;
+}
+
+.resource-item:hover { background: var(--off-white); }
+
+.resource-item strong {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--navy);
+  display: block;
+  margin-bottom: 3px;
+}
+
+.resource-item span {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+.resource-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--navy);
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  white-space: nowrap;
+  transition: all 0.18s;
+}
+
+.resource-link:hover {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+
+/* ── BACK LINK ── */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--navy);
+  text-decoration: none;
+  padding: 10px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-top: 8px;
+  transition: all 0.18s;
+}
+
+.back-link:hover {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--navy);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 28px 40px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  color: rgba(255,255,255,0.7);
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: rgba(255,255,255,0.35);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .nav-inner { padding: 0 16px; }
+  nav a.nav-link { padding: 18px 10px; font-size: 13px; }
+  .course-header-inner { padding: 40px 20px 36px; }
+  .content { padding: 32px 20px 48px; }
+  .section-box { padding: 24px 20px; }
+  .highlight-grid { grid-template-columns: 1fr; }
+  .footer-inner { justify-content: center; text-align: center; }
+}
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
-<a href="index.html?tab=home">Home</a>
-<a href="index.html?tab=research">Research</a>
-<a href="index.html?tab=teaching">Teaching</a>
-<a href="index.html?tab=contact">Contact</a>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-wordmark">H. Teymouri Athar</a>
+    <a href="index.html?tab=home" class="nav-link">Home</a>
+    <a href="index.html?tab=research" class="nav-link">Research</a>
+    <a href="index.html?tab=teaching" class="nav-link">Teaching</a>
+    <a href="index.html?tab=contact" class="nav-link">Contact</a>
+  </div>
 </nav>
 
+<!-- COURSE HEADER -->
 <div class="course-header">
-<h1>Marketing Research</h1>
-<p>
-Designing and using research to understand markets, measure customer insights, and support evidence-based marketing decisions.
-</p>
+  <div class="course-header-inner">
+    <span class="course-eyebrow">Course</span>
+    <h1>Marketing Research</h1>
+    <p>Designing and using research to understand markets, measure customer insights, and support evidence-based marketing decisions.</p>
+  </div>
 </div>
 
+<!-- CONTENT -->
 <div class="content">
 
-<div class="section-box">
-<h2>Course Description</h2>
+  <div class="section-box">
+    <span class="section-eyebrow">Overview</span>
+    <h2>Course Description</h2>
+    <p>
+      This course introduces students to the theory and practice of marketing research and its role in managerial decision making. Students learn how organizations use research to identify problems, evaluate opportunities, understand customers, and support strategic and tactical marketing decisions.
+    </p>
+    <p>
+      The course covers the full marketing research process, including problem formulation, exploratory research, secondary data analysis, qualitative and quantitative research design, measurement and scaling, questionnaire design, sampling, data collection, statistical analysis, and communication of research findings.
+    </p>
+    <p>
+      Emphasis is placed on the practical application of marketing research methods to real business problems. Students complete a semester-long research project in which they design and conduct a marketing research study from problem definition to final report. Basic statistical concepts commonly used in marketing research, including sampling distributions, normal distribution, hypothesis testing, correlation, and regression, are introduced with emphasis on interpretation and managerial relevance.
+    </p>
+  </div>
 
-<p>
-This course introduces students to the theory and practice of marketing research and its role in managerial decision making. Students learn how organizations use research to identify problems, evaluate opportunities, understand customers, and support strategic and tactical marketing decisions.
-</p>
+  <div class="section-box">
+    <span class="section-eyebrow">Goals</span>
+    <h2>Course Objectives</h2>
+    <ul>
+      <li>Understand the role of marketing research in managerial decision making</li>
+      <li>Formulate marketing problems and translate them into researchable questions and objectives</li>
+      <li>Identify and evaluate appropriate sources of primary and secondary data</li>
+      <li>Design exploratory, descriptive, and causal research studies</li>
+      <li>Develop questionnaires and measurement scales that are reliable and valid</li>
+      <li>Apply sampling and data collection principles in a marketing context</li>
+      <li>Interpret basic statistical results and translate them into managerial insights</li>
+      <li>Communicate research findings clearly through written reports and presentations</li>
+    </ul>
+  </div>
 
-<p>
-The course covers the full marketing research process, including problem formulation, exploratory research, secondary data analysis, qualitative and quantitative research design, measurement and scaling, questionnaire design, sampling, data collection, statistical analysis, and communication of research findings.
-</p>
+  <div class="section-box">
+    <span class="section-eyebrow">Topics</span>
+    <h2>What Students Learn</h2>
+    <div class="highlight-grid">
 
-<p>
-Emphasis is placed on the practical application of marketing research methods to real business problems. Students complete a semester-long research project in which they design and conduct a marketing research study from problem definition to final report. Basic statistical concepts commonly used in marketing research, including sampling distributions, normal distribution, hypothesis testing, correlation, and regression, are introduced with emphasis on interpretation and managerial relevance.
-</p>
+      <div class="card">
+        <h3>Problem Formulation</h3>
+        <p>Students learn how to move from a broad managerial issue to a clearly defined research problem, research objectives, and actionable research questions.</p>
+      </div>
 
-</div>
+      <div class="card">
+        <h3>Exploratory Research</h3>
+        <p>Students use literature searches, focus groups, interviews, and other exploratory methods to better understand marketing problems before designing formal research.</p>
+      </div>
 
-<div class="section-box">
-<h2>Course Objectives</h2>
+      <div class="card">
+        <h3>Secondary Data Analysis</h3>
+        <p>Students evaluate internal and external sources of data and learn how existing information can support managerial decisions and sharpen research design.</p>
+      </div>
 
-<ul>
-<li>Understand the role of marketing research in managerial decision making</li>
-<li>Formulate marketing problems and translate them into researchable questions and objectives</li>
-<li>Identify and evaluate appropriate sources of primary and secondary data</li>
-<li>Design exploratory, descriptive, and causal research studies</li>
-<li>Develop questionnaires and measurement scales that are reliable and valid</li>
-<li>Apply sampling and data collection principles in a marketing context</li>
-<li>Interpret basic statistical results and translate them into managerial insights</li>
-<li>Communicate research findings clearly through written reports and presentations</li>
-</ul>
+      <div class="card">
+        <h3>Survey &amp; Questionnaire Design</h3>
+        <p>Students design effective data collection instruments, write clear questions, reduce wording bias, and structure questionnaires for reliable measurement.</p>
+      </div>
 
-</div>
+      <div class="card">
+        <h3>Measurement &amp; Scaling</h3>
+        <p>Students work with nominal, ordinal, interval, and ratio scales and learn how reliability, validity, and measurement error affect research quality.</p>
+      </div>
 
-<div class="section-box">
-<h2>What Students Learn</h2>
+      <div class="card">
+        <h3>Sampling &amp; Data Collection</h3>
+        <p>Students learn how to define target populations, choose sampling methods, consider sample size, and understand sources of sampling and response error.</p>
+      </div>
 
-<div class="highlight-grid">
+      <div class="card">
+        <h3>Marketing Data Analysis</h3>
+        <p>Students prepare and analyze research data using summary statistics, visualizations, and basic inferential tools commonly used in marketing research.</p>
+      </div>
 
-<div class="card">
-<h3>Problem Formulation</h3>
-<p>Students learn how to move from a broad managerial issue to a clearly defined research problem, research objectives, and actionable research questions.</p>
-</div>
+      <div class="card">
+        <h3>Hypothesis Testing</h3>
+        <p>Students are introduced to normal distribution, p-values, statistical significance, correlation, and regression with emphasis on interpretation rather than mathematical derivation.</p>
+      </div>
 
-<div class="card">
-<h3>Exploratory Research</h3>
-<p>Students use literature searches, focus groups, interviews, and other exploratory methods to better understand marketing problems before designing formal research.</p>
-</div>
+      <div class="card">
+        <h3>Research Reporting</h3>
+        <p>Students learn how to translate findings into clear managerial implications and present results professionally in both written reports and team presentations.</p>
+      </div>
 
-<div class="card">
-<h3>Secondary Data Analysis</h3>
-<p>Students evaluate internal and external sources of data and learn how existing information can support managerial decisions and sharpen research design.</p>
-</div>
+    </div>
+  </div>
 
-<div class="card">
-<h3>Survey & Questionnaire Design</h3>
-<p>Students design effective data collection instruments, write clear questions, reduce wording bias, and structure questionnaires for reliable measurement.</p>
-</div>
+  <div class="section-box">
+    <span class="section-eyebrow">Pedagogy</span>
+    <h2>Applied Learning Approach</h2>
+    <p>
+      This course emphasizes hands-on, project-based learning. Throughout the semester, students work in teams on a marketing research project that mirrors how research is conducted in practice. Teams define a marketing problem, gather secondary information, develop a research design, create a questionnaire, collect data, analyze results, and present recommendations.
+    </p>
+    <p>
+      Individual assignments reinforce core skills such as secondary data search, experiment design, measurement, and question writing. Together, the individual and team components help students build both conceptual understanding and practical research ability.
+    </p>
+  </div>
 
-<div class="card">
-<h3>Measurement & Scaling</h3>
-<p>Students work with nominal, ordinal, interval, and ratio scales and learn how reliability, validity, and measurement error affect research quality.</p>
-</div>
+  <div class="section-box">
+    <span class="section-eyebrow">Resources</span>
+    <h2>Course Materials</h2>
+    <div class="resource-list">
 
-<div class="card">
-<h3>Sampling & Data Collection</h3>
-<p>Students learn how to define target populations, choose sampling methods, consider sample size, and understand sources of sampling and response error.</p>
-</div>
+      <div class="resource-item">
+        <div>
+          <strong>Syllabus</strong>
+          <span>Course description, schedule, assignments, grading, and expectations</span>
+        </div>
+        <a class="resource-link" href="files/marketing-research-syllabus.pdf" target="_blank">
+          View
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+      </div>
 
-<div class="card">
-<h3>Marketing Data Analysis</h3>
-<p>Students prepare and analyze research data using summary statistics, visualizations, and basic inferential tools commonly used in marketing research.</p>
-</div>
+      <div class="resource-item">
+        <div>
+          <strong>Sample Assignments</strong>
+          <span>Examples of individual and team-based marketing research assignments and project milestones</span>
+        </div>
+        <a class="resource-link" href="https://github.com/hesamteymouri/marketing-research/tree/main/Sample%20Assignments" target="_blank">
+          Open GitHub
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+      </div>
 
-<div class="card">
-<h3>Hypothesis Testing</h3>
-<p>Students are introduced to normal distribution, p-values, statistical significance, correlation, and regression with emphasis on interpretation rather than mathematical derivation.</p>
-</div>
+    </div>
+  </div>
 
-<div class="card">
-<h3>Research Reporting</h3>
-<p>Students learn how to translate findings into clear managerial implications and present results professionally in both written reports and team presentations.</p>
-</div>
-  
-</div>
-
-</div>
-
-<div class="section-box">
-<h2>Applied Learning Approach</h2>
-
-<p>
-This course emphasizes hands-on, project-based learning. Throughout the semester, students work in teams on a marketing research project that mirrors how research is conducted in practice. Teams define a marketing problem, gather secondary information, develop a research design, create a questionnaire, collect data, analyze results, and present recommendations.
-</p>
-
-<p>
-Individual assignments reinforce core skills such as secondary data search, experiment design, measurement, and question writing. Together, the individual and team components help students build both conceptual understanding and practical research ability.
-</p>
-
-</div>
-
-<div class="section-box">
-<h2>Course Materials</h2>
-
-<div class="resource-list">
-
-<div class="resource-item">
-<div>
-<strong>Syllabus</strong><br>
-<span>Course description, schedule, assignments, grading, and expectations</span>
-</div>
-<a class="resource-link" href="files/marketing-research-syllabus.pdf" target="_blank">
-View
-</a>
-</div>
-
-<div class="resource-item">
-<div>
-<strong>Sample Assignments</strong><br>
-<span>Examples of individual and team-based marketing research assignments and project milestones</span>
-</div>
-<a class="resource-link" href="https://github.com/hesamteymouri/marketing-research/tree/main/Sample%20Assignments" target="_blank">
-Open GitHub
-</a>
-</div>
-
-
-</div>
-
-</div>
-
-<a href="index.html" class="back-link">← Back to homepage</a>
+  <a href="index.html" class="back-link">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    Back to homepage
+  </a>
 
 </div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-name">Hesam Teymouri Athar, Ph.D.</span>
+    <span class="footer-copy">© 2026 · University of New Haven</span>
+  </div>
+</footer>
 
 </body>
 </html>
