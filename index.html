@@ -377,14 +377,44 @@ nav button.active::after { transform: scaleX(1); }
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 24px;
-  transition: border-color 0.2s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.sidebar-card::before {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--navy));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 10% 100%, rgba(201,168,76,0.06) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .sidebar-card:hover {
-  border-color: rgba(10,14,46,0.25);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(10,14,46,0.07);
+  border-color: rgba(10,14,46,0.22);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(10,14,46,0.10);
 }
+
+.sidebar-card:hover::before { transform: scaleX(1); }
+.sidebar-card:hover::after  { opacity: 1; }
+
+.sidebar-card:hover h3 { color: var(--navy-light); }
+
+.sidebar-card h3 { transition: color 0.2s ease; }
 
 .sidebar-card-label {
   font-family: 'DM Mono', monospace;
