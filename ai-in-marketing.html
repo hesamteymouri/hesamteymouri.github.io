@@ -255,8 +255,113 @@ nav a.nav-link:hover::after { transform: scaleX(0.4); }
 }
 
 .card:hover::before { transform: scaleX(1); }
-
 .card p { margin-bottom: 0; font-size: 14.5px; }
+
+/* ── SCHEDULE TABLE ── */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.schedule-table th {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 10px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-weight: 400;
+}
+
+.schedule-table td {
+  padding: 14px 16px;
+  color: var(--text-mid);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+}
+
+.schedule-table tr:last-child td { border-bottom: none; }
+.schedule-table tr:hover td { background: var(--off-white); }
+
+.week-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.topic-name {
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.milestone-pill {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(201,168,76,0.12);
+  color: #8a5c00;
+  border: 1px solid rgba(201,168,76,0.3);
+  margin-top: 4px;
+  white-space: nowrap;
+}
+
+/* ── GRADING TABLE ── */
+.grading-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.grading-table th {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 10px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-weight: 400;
+}
+
+.grading-table td {
+  padding: 14px 16px;
+  color: var(--text-mid);
+  font-weight: 300;
+  font-size: 14.5px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+.grading-table tr:last-child td {
+  border-bottom: none;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.grading-table tr:hover td { background: var(--off-white); }
+
+.points-col {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: var(--navy);
+  font-weight: 400;
+  text-align: right;
+  white-space: nowrap;
+}
 
 /* ── RESOURCE LIST ── */
 .resource-list {
@@ -378,12 +483,16 @@ footer {
   .section-box { padding: 24px 20px; }
   .highlight-grid { grid-template-columns: 1fr; }
   .footer-inner { justify-content: center; text-align: center; }
+  .schedule-table, .grading-table { font-size: 13px; }
+  .schedule-table th, .schedule-table td,
+  .grading-table th, .grading-table td { padding: 10px 10px; }
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="nav-wordmark">H. Teymouri Athar</a>
@@ -394,14 +503,16 @@ footer {
   </div>
 </nav>
 
+<!-- COURSE HEADER -->
 <div class="course-header">
   <div class="course-header-inner">
     <span class="course-eyebrow">Course</span>
     <h1>AI in Marketing</h1>
-    <p>Hands-on application of artificial intelligence to content creation, customer insights, personalization, and AI-supported marketing strategy.</p>
+    <p>Hands-on, applied use of artificial intelligence tools for modern marketing strategy, content, and customer experience design.</p>
   </div>
 </div>
 
+<!-- CONTENT -->
 <div class="content">
 
   <div class="section-box">
@@ -411,16 +522,16 @@ footer {
       This course prepares students to use artificial intelligence (AI) in modern marketing practice. As companies increasingly rely on AI tools to generate content, analyze customer data, personalize experiences, and automate decisions, there is growing demand for marketers who can effectively work with and manage AI systems.
     </p>
     <p>
-      The course takes a hands-on, applied approach to AI in marketing. Students learn how to use AI tools to design marketing campaigns, generate and evaluate content, analyze customer insights, and build AI-assisted customer experiences. Rather than focusing on technical programming, the course emphasizes practical skills, strategic thinking, and critical evaluation of AI outputs.
+      The course takes a hands-on, applied approach to AI in marketing. Students will learn how to use AI tools to design marketing campaigns, generate and evaluate content, analyze customer insights, and build AI-assisted customer experiences. Rather than focusing on technical programming, the course emphasizes practical skills, strategic thinking, and critical evaluation of AI outputs.
     </p>
     <p>
-      Throughout the semester, students work on real-world marketing tasks using AI tools and develop a semester-long project where they design an AI-powered marketing strategy for a business.
+      Throughout the semester, students will work on real-world marketing tasks using AI tools and develop a semester-long project where they design an AI-powered marketing strategy for a business. The course is designed to reflect how AI is currently used in industry and to prepare students for roles where the ability to effectively use AI is a key competitive advantage.
     </p>
   </div>
 
   <div class="section-box">
     <span class="section-eyebrow">Objectives</span>
-    <h2>Course Learning Objectives</h2>
+    <h2>Course Objectives</h2>
     <ul>
       <li>Use AI tools to generate and refine marketing content (ads, emails, social media)</li>
       <li>Apply prompt design techniques to improve AI-generated outputs</li>
@@ -438,53 +549,48 @@ footer {
     <div class="highlight-grid">
 
       <div class="card">
-        <h3>AI and Consumer Behavior</h3>
-        <p>Students evaluate AI versus human outputs and examine persuasion, trust, and control in AI-supported marketing decisions.</p>
+        <h3>AI &amp; Consumer Behavior</h3>
+        <p>Students evaluate how AI-generated content compares to human-created outputs in terms of persuasion, trust, and consumer response.</p>
       </div>
 
       <div class="card">
-        <h3>Prompt Design as a Marketing Skill</h3>
-        <p>Students learn how to design, test, and refine prompts to improve the quality and usefulness of AI-generated outputs.</p>
+        <h3>Prompting as a Marketing Skill</h3>
+        <p>Students learn prompt design, iteration, and output improvement — treating prompting as a core strategic marketing competency.</p>
       </div>
 
       <div class="card">
-        <h3>AI for Market Research and Customer Insights</h3>
-        <p>Students analyze customer reviews and text data using AI to identify themes, needs, pain points, and actionable insights.</p>
+        <h3>AI for Market Research</h3>
+        <p>Students analyze customer reviews and extract insights using AI tools to support segmentation, persona development, and strategic decisions.</p>
       </div>
 
       <div class="card">
-        <h3>AI-Driven Content Creation and Brand Voice</h3>
-        <p>Students develop brand-aligned content using AI for campaigns, messaging, and platform-specific communication.</p>
+        <h3>AI-Driven Content Creation</h3>
+        <p>Students develop brand voice and generate marketing content across channels using AI, evaluating outputs for effectiveness and alignment.</p>
       </div>
 
       <div class="card">
-        <h3>Social Media Strategy and Content Planning</h3>
-        <p>Students build AI-supported content plans and platform-specific strategies for social media marketing.</p>
+        <h3>Social Media &amp; Campaign Planning</h3>
+        <p>Students build AI-powered content calendars and platform-specific strategies for social media marketing campaigns.</p>
       </div>
 
       <div class="card">
-        <h3>AI-Enhanced Advertising and Campaign Design</h3>
-        <p>Students generate, compare, and refine ad variations and campaign concepts using AI tools.</p>
+        <h3>AI-Enhanced Advertising</h3>
+        <p>Students generate, compare, and refine ad variations using AI tools, evaluating creative outputs against marketing objectives.</p>
       </div>
 
       <div class="card">
-        <h3>Visual Marketing and Creative Generation</h3>
-        <p>Students create and evaluate AI-supported visuals and creative assets for marketing campaigns.</p>
+        <h3>Customer Experience &amp; AI Chatbots</h3>
+        <p>Students design chatbot and AI-supported customer journeys, mapping touchpoints across the full customer experience.</p>
       </div>
 
       <div class="card">
-        <h3>Customer Experience Design and AI Chatbots</h3>
-        <p>Students design chatbot interactions and AI-supported customer journeys across marketing touchpoints.</p>
+        <h3>Personalization &amp; Recommendations</h3>
+        <p>Students design personalized marketing strategies using AI, exploring recommendation systems and tailored customer communication.</p>
       </div>
 
       <div class="card">
-        <h3>Personalization and Recommendation Strategy</h3>
-        <p>Students develop AI-supported personalization strategies that tailor messages and experiences to customer needs.</p>
-      </div>
-
-      <div class="card">
-        <h3>AI-Driven Analytics and Optimization</h3>
-        <p>Students interpret AI-generated insights and design testing and optimization plans to improve campaign performance.</p>
+        <h3>Experimentation &amp; Optimization</h3>
+        <p>Students design A/B experiments and optimize AI-generated content, learning how to test and improve marketing performance systematically.</p>
       </div>
 
     </div>
@@ -494,61 +600,27 @@ footer {
     <span class="section-eyebrow">Pedagogy</span>
     <h2>Applied Learning Approach</h2>
     <p>
-      This course is highly hands-on and application-focused. Each class session includes short conceptual lectures, live demonstrations of AI tools, in-class exercises, and group-based activities simulating real marketing tasks.
+      This course is highly hands-on and application-focused. Each class session includes short conceptual lectures, live demonstrations of AI tools, in-class exercises where students actively use AI, and group-based activities simulating real marketing tasks.
     </p>
     <p>
-      Students regularly create, test, and refine marketing outputs using AI tools. A semester-long group project allows students to apply these skills in a realistic business context.
+      Students regularly create, test, and refine marketing outputs using AI tools. Many activities are designed to mirror how marketing teams use AI in practice. A semester-long group project allows students to apply these skills in a realistic business context, developing a complete AI-powered marketing strategy from customer segmentation through to testing and final presentation.
     </p>
-  </div>
-
-  <div class="section-box">
-    <span class="section-eyebrow">Assessment</span>
-    <h2>Course Requirements & Assessment</h2>
-    <p>
-      Students complete individual assignments, AI-based examinations, participation-based in-class work, and a semester-long group project. Individual assignments focus on prompting, customer insight extraction, evaluation of AI-generated content, and output improvement.
-    </p>
-    <p>
-      The group project is completed through multiple milestones across the semester, including customer segmentation, content development, customer experience design, and testing strategy.
-    </p>
-    <ul>
-      <li>Midterm Exam (Individual): 200 points</li>
-      <li>Final Exam (Individual): 200 points</li>
-      <li>Individual Assignments (4 total): 200 points</li>
-      <li>Group Project Milestones (4 total): 200 points</li>
-      <li>Final Group Project (Report + Presentation): 150 points</li>
-      <li>Participation & In-Class Activities: 50 points</li>
-    </ul>
-  </div>
-
-  <div class="section-box">
-    <span class="section-eyebrow">Expectations</span>
-    <h2>Student Expectations</h2>
-    <ul>
-      <li>Bring a laptop to class for live AI use and in-class exercises</li>
-      <li>Actively engage in hands-on, application-based learning</li>
-      <li>Be willing to experiment with new AI tools used in marketing contexts</li>
-      <li>Think critically about AI-generated outputs rather than relying on them blindly</li>
-      <li>Work cooperatively in team-based projects and activities</li>
-      <li>Clearly explain and justify how AI was used in your work</li>
-    </ul>
   </div>
 
   <div class="section-box">
     <span class="section-eyebrow">Resources</span>
     <h2>Course Materials</h2>
     <div class="resource-list">
-
       <div class="resource-item">
         <div>
           <strong>Syllabus</strong>
-          <span>Course description, schedule, assignments, and expectations</span>
+          <span>Course description, schedule, assignments, grading, and expectations</span>
         </div>
-        <a class="resource-link" href="files/AI in Marketing-syllabus" target="_blank">
-          View File
+        <a class="resource-link" href="files/AI_in_Marketing-syllabus.pdf" target="_blank">
+          View
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
         </a>
       </div>
-
     </div>
   </div>
 
@@ -559,6 +631,7 @@ footer {
 
 </div>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <span class="footer-name">Hesam Teymouri Athar, Ph.D.</span>
