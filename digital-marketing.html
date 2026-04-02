@@ -5,10 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Digital Marketing | Hesam Teymouri Athar</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
-
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
   --navy: #0a0e2e;
   --navy-mid: #151a4a;
@@ -24,9 +22,7 @@
   --radius: 4px;
   --radius-lg: 10px;
 }
-
 html { scroll-behavior: smooth; }
-
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--cream);
@@ -34,8 +30,6 @@ body {
   line-height: 1.7;
   font-weight: 400;
 }
-
-/* ── NAV ── */
 nav {
   background: #fff;
   border-bottom: 1px solid var(--border);
@@ -43,7 +37,6 @@ nav {
   top: 0;
   z-index: 1000;
 }
-
 .nav-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -51,7 +44,6 @@ nav {
   display: flex;
   align-items: center;
 }
-
 .nav-wordmark {
   font-family: 'Playfair Display', serif;
   font-size: 15px;
@@ -63,7 +55,6 @@ nav {
   white-space: nowrap;
   text-decoration: none;
 }
-
 nav a.nav-link {
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
@@ -76,7 +67,6 @@ nav a.nav-link {
   letter-spacing: 0.01em;
   display: inline-block;
 }
-
 nav a.nav-link::after {
   content: "";
   position: absolute;
@@ -86,17 +76,13 @@ nav a.nav-link::after {
   transform: scaleX(0);
   transition: transform 0.25s ease;
 }
-
 nav a.nav-link:hover { color: var(--navy); }
 nav a.nav-link:hover::after { transform: scaleX(0.4); }
-
-/* ── COURSE HEADER ── */
 .course-header {
   background: var(--navy);
   position: relative;
   overflow: hidden;
 }
-
 .course-header::before {
   content: "";
   position: absolute;
@@ -106,7 +92,6 @@ nav a.nav-link:hover::after { transform: scaleX(0.4); }
     radial-gradient(ellipse 40% 60% at 10% 20%, rgba(255,255,255,0.04) 0%, transparent 60%);
   pointer-events: none;
 }
-
 .course-header::after {
   content: "";
   position: absolute;
@@ -114,7 +99,6 @@ nav a.nav-link:hover::after { transform: scaleX(0.4); }
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
-
 .course-header-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -122,7 +106,6 @@ nav a.nav-link:hover::after { transform: scaleX(0.4); }
   position: relative;
   z-index: 1;
 }
-
 .course-eyebrow {
   font-family: 'DM Mono', monospace;
   font-size: 11px;
@@ -132,7 +115,6 @@ nav a.nav-link:hover::after { transform: scaleX(0.4); }
   display: block;
   margin-bottom: 14px;
 }
-
 .course-header h1 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(28px, 3.5vw, 44px);
@@ -142,7 +124,6 @@ nav a.nav-link:hover::after { transform: scaleX(0.4); }
   margin-bottom: 16px;
   letter-spacing: -0.5px;
 }
-
 .course-header p {
   font-size: 17px;
   color: rgba(255,255,255,0.65);
@@ -150,15 +131,11 @@ nav a.nav-link:hover::after { transform: scaleX(0.4); }
   line-height: 1.65;
   font-weight: 300;
 }
-
-/* ── LAYOUT ── */
 .content {
   max-width: 1000px;
   margin: 0 auto;
   padding: 48px 40px 60px;
 }
-
-/* ── SECTION BOX ── */
 .section-box {
   background: #fff;
   border-radius: var(--radius-lg);
@@ -167,7 +144,6 @@ nav a.nav-link:hover::after { transform: scaleX(0.4); }
   margin-bottom: 20px;
   box-shadow: 0 4px 16px rgba(10,14,46,0.05);
 }
-
 .section-eyebrow {
   font-family: 'DM Mono', monospace;
   font-size: 11px;
@@ -177,7 +153,6 @@ nav a.nav-link:hover::after { transform: scaleX(0.4); }
   display: block;
   margin-bottom: 10px;
 }
-
 .section-box h2 {
   font-family: 'Playfair Display', serif;
   font-size: 26px;
@@ -186,7 +161,6 @@ nav a.nav-link:hover::after { transform: scaleX(0.4); }
   margin-bottom: 18px;
   letter-spacing: -0.3px;
 }
-
 .section-box h3 {
   font-family: 'Playfair Display', serif;
   font-size: 17px;
@@ -194,7 +168,6 @@ nav a.nav-link:hover::after { transform: scaleX(0.4); }
   color: var(--navy);
   margin-bottom: 8px;
 }
-
 .section-box p {
   font-size: 15.5px;
   color: var(--text-mid);
@@ -202,31 +175,25 @@ nav a.nav-link:hover::after { transform: scaleX(0.4); }
   font-weight: 300;
   margin-bottom: 14px;
 }
-
 .section-box p:last-child { margin-bottom: 0; }
-
 .section-box ul {
   padding-left: 20px;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-
 .section-box ul li {
   font-size: 15.5px;
   color: var(--text-mid);
   line-height: 1.65;
   font-weight: 300;
 }
-
-/* ── HIGHLIGHT GRID ── */
 .highlight-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 16px;
   margin-top: 20px;
 }
-
 .card {
   background: var(--cream);
   border: 1px solid var(--border);
@@ -236,7 +203,6 @@ nav a.nav-link:hover::after { transform: scaleX(0.4); }
   overflow: hidden;
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
-
 .card::before {
   content: "";
   position: absolute;
@@ -247,18 +213,29 @@ nav a.nav-link:hover::after { transform: scaleX(0.4); }
   transform-origin: left;
   transition: transform 0.3s ease;
 }
-
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 32px rgba(10,14,46,0.09);
   border-color: rgba(10,14,46,0.2);
 }
-
 .card:hover::before { transform: scaleX(1); }
-
 .card p { margin-bottom: 0; font-size: 14.5px; }
-
-/* ── RESOURCE LIST ── */
+.tool-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+.tool-pill {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(10,14,46,0.06);
+  color: var(--navy-light);
+  border: 1px solid rgba(10,14,46,0.12);
+}
 .resource-list {
   display: flex;
   flex-direction: column;
@@ -269,7 +246,6 @@ nav a.nav-link:hover::after { transform: scaleX(0.4); }
   overflow: hidden;
   margin-top: 16px;
 }
-
 .resource-item {
   background: #fff;
   display: flex;
@@ -280,9 +256,7 @@ nav a.nav-link:hover::after { transform: scaleX(0.4); }
   padding: 20px 24px;
   transition: background 0.15s;
 }
-
 .resource-item:hover { background: var(--off-white); }
-
 .resource-item strong {
   font-size: 15px;
   font-weight: 500;
@@ -290,13 +264,11 @@ nav a.nav-link:hover::after { transform: scaleX(0.4); }
   display: block;
   margin-bottom: 3px;
 }
-
 .resource-item span {
   font-size: 13.5px;
   color: var(--text-muted);
   font-weight: 300;
 }
-
 .resource-link {
   display: inline-flex;
   align-items: center;
@@ -312,14 +284,11 @@ nav a.nav-link:hover::after { transform: scaleX(0.4); }
   white-space: nowrap;
   transition: all 0.18s;
 }
-
 .resource-link:hover {
   background: var(--navy);
   color: #fff;
   border-color: var(--navy);
 }
-
-/* ── BACK LINK ── */
 .back-link {
   display: inline-flex;
   align-items: center;
@@ -334,20 +303,16 @@ nav a.nav-link:hover::after { transform: scaleX(0.4); }
   margin-top: 8px;
   transition: all 0.18s;
 }
-
 .back-link:hover {
   background: var(--navy);
   color: #fff;
   border-color: var(--navy);
 }
-
-/* ── FOOTER ── */
 footer {
   background: var(--navy);
   border-top: 1px solid rgba(255,255,255,0.08);
   padding: 28px 40px;
 }
-
 .footer-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -357,19 +322,15 @@ footer {
   gap: 20px;
   flex-wrap: wrap;
 }
-
 .footer-name {
   font-family: 'Playfair Display', serif;
   font-size: 15px;
   color: rgba(255,255,255,0.7);
 }
-
 .footer-copy {
   font-size: 13px;
   color: rgba(255,255,255,0.35);
 }
-
-/* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .nav-inner { padding: 0 16px; }
   nav a.nav-link { padding: 18px 10px; font-size: 13px; }
@@ -381,10 +342,8 @@ footer {
 }
 </style>
 </head>
-
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="nav-wordmark">H. Teymouri Athar</a>
@@ -395,7 +354,6 @@ footer {
   </div>
 </nav>
 
-<!-- COURSE HEADER -->
 <div class="course-header">
   <div class="course-header-inner">
     <span class="course-eyebrow">Course</span>
@@ -404,7 +362,6 @@ footer {
   </div>
 </div>
 
-<!-- CONTENT -->
 <div class="content">
 
   <div class="section-box">
@@ -437,38 +394,43 @@ footer {
     <div class="highlight-grid">
 
       <div class="card">
-        <h3>Market Research Using AI</h3>
-        <p>Students collect text data from online sources such as reviews, forums, and social media and use AI tools to analyze it. The goal is to identify customer insights, trends, and perceptions that can inform marketing decisions.</p>
+        <h3>AI-Powered Market Research</h3>
+        <p>Students use AI tools to collect and analyze customer reviews, social media posts, and online forums to extract insights, identify trends, and build customer personas that inform marketing strategy.</p>
       </div>
 
       <div class="card">
-        <h3>Website Strategy</h3>
-        <p>Students learn how websites function, how to build a basic website from scratch, and how websites support digital marketing through content, structure, and customer conversion.</p>
+        <h3>Website Strategy &amp; Design</h3>
+        <p>Students learn how to build and optimize a website from scratch, structure content for conversion, and evaluate landing page performance against marketing objectives.</p>
       </div>
 
       <div class="card">
-        <h3>Search Engine Marketing</h3>
-        <p>Students learn how to design and run search engine marketing campaigns, including Google PPC and display advertising, and how to evaluate their effectiveness in reaching target audiences and driving traffic.</p>
+        <h3>Search Engine Marketing (SEM)</h3>
+        <p>Students learn how paid search works, including keyword research, ad copywriting, bidding strategies, and performance evaluation. Topics include PPC ads, display ads, and YouTube advertising, with hands-on experience using Google Ads.</p>
       </div>
 
       <div class="card">
-        <h3>Search Engine Optimization</h3>
-        <p>Students learn how search engines work and how websites can improve their ranking on search engine results pages (SERPs) to attract more visitors.</p>
+        <h3>Search Engine Optimization (SEO)</h3>
+        <p>Students learn on-page and off-page SEO techniques, covering keyword strategy, metadata optimization, backlink analysis, and improving organic search rankings using tools like Google Search Console and Semrush.</p>
       </div>
 
       <div class="card">
         <h3>Social Media Marketing</h3>
-        <p>Students learn how to use storytelling and design social media advertising campaigns to engage audiences, build brand awareness, and promote products or services.</p>
+        <p>Students learn how to design paid social campaigns, build audiences, test creative formats, and evaluate performance metrics. Topics include organic social strategy, paid campaigns, A/B testing ad creative, and interpreting results, with hands-on experience using Meta Ads Manager across Facebook and Instagram.</p>
       </div>
 
       <div class="card">
-        <h3>Email Marketing</h3>
-        <p>Students learn how to design email marketing campaigns and automate customer communication while following legal and ethical guidelines for email marketing.</p>
+        <h3>Email Marketing &amp; Automation</h3>
+        <p>Students design email campaigns and automated customer journeys using Mailchimp, covering list segmentation, subject line testing, and drip sequences. The course also covers the legal framework governing email marketing, including CAN-SPAM, GDPR, and opt-in best practices.</p>
       </div>
 
       <div class="card">
         <h3>Web Analytics</h3>
-        <p>Students learn how to use Google Analytics 4 to analyze website traffic, extract customer insights, and build marketing funnels to evaluate and improve digital marketing performance.</p>
+        <p>Students use Google Analytics 4 to analyze website traffic, track user behavior, set up conversion events, and build marketing funnels — translating data into actionable insights for campaign optimization.</p>
+      </div>
+
+      <div class="card">
+        <h3>AI Chatbots &amp; Customer Experience</h3>
+        <p>Students design and deploy conversational marketing experiences using chatbot platforms such as Landbot, building automated customer journeys that handle inquiries, qualify leads, and guide users through the sales funnel.</p>
       </div>
 
     </div>
@@ -489,7 +451,6 @@ footer {
     <span class="section-eyebrow">Resources</span>
     <h2>Course Materials</h2>
     <div class="resource-list">
-
       <div class="resource-item">
         <div>
           <strong>Syllabus</strong>
@@ -500,7 +461,6 @@ footer {
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
         </a>
       </div>
-
       <div class="resource-item">
         <div>
           <strong>Sample Group Assignments</strong>
@@ -511,7 +471,6 @@ footer {
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
         </a>
       </div>
-
     </div>
   </div>
 
@@ -522,7 +481,6 @@ footer {
 
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <span class="footer-name">Hesam Teymouri Athar, Ph.D.</span>
