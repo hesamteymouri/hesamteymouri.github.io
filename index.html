@@ -212,33 +212,63 @@ nav {
 /* ── HERO ── */
 .hero {
   background: linear-gradient(135deg, #000814 0%, #001d3d 50%, #003566 100%);
-  padding: 120px 0 100px;
+  padding: 130px 0 110px;
   overflow: hidden;
   position: relative;
+  min-height: 520px;
 }
 
-.hero::before {
-  content: "";
+/* Background photo — right side */
+.hero-bg-photo {
   position: absolute;
-  width: 500px; height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(0,53,102,0.12) 0%, transparent 70%);
-  top: -100px; right: -100px;
-  pointer-events: none;
+  top: 0; right: 0;
+  width: 62%;
+  height: 100%;
+  background-image: url('hesam-portrait.jpeg');
+  background-size: cover;
+  background-position: center 12%;
+  z-index: 0;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0,0,0,0.1)  12%,
+    rgba(0,0,0,0.45) 26%,
+    rgba(0,0,0,0.82) 40%,
+    black 54%,
+    black 100%
+  ), linear-gradient(
+    to top,
+    transparent 0%,
+    black 22%
+  );
+  -webkit-mask-composite: destination-in;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0,0,0,0.1)  12%,
+    rgba(0,0,0,0.45) 26%,
+    rgba(0,0,0,0.82) 40%,
+    black 54%,
+    black 100%
+  ), linear-gradient(
+    to top,
+    transparent 0%,
+    black 22%
+  );
+  mask-composite: intersect;
 }
 
 .hero-inner {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 60px;
-  align-items: flex-end;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-text {
-  padding-bottom: 60px;
+  max-width: 580px;
+  padding-bottom: 0;
 }
 
 .hero-eyebrow {
@@ -1350,10 +1380,8 @@ hr.divider {
 
 /* ── TABLET PORTRAIT (900px) ── */
 @media (max-width: 900px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 32px; }
-  .hero-photo-wrap { justify-self: center; }
-  .hero-photo { width: 260px; height: 320px; }
-  .hero-photo-placeholder { width: 260px; height: 320px; }
+  .hero-bg-photo { width: 70%; }
+  .hero-bg-photo::before { background: linear-gradient(to right, #000814 0%, #001d3d 25%, rgba(0,29,61,0.85) 50%, rgba(0,29,61,0.3) 75%, transparent 100%); }
   .about-inner { grid-template-columns: 1fr !important; gap: 40px !important; }
   .about-affiliations { flex-direction: row; flex-wrap: wrap; justify-content: center; }
   .affil-card { flex: 1; min-width: 220px; }
@@ -1378,9 +1406,8 @@ hr.divider {
   .hero-tagline { font-size: 15px; }
   .hero-actions { gap: 10px; }
   .hero-actions .btn { font-size: 13px; padding: 10px 18px; }
-  .hero-photo-wrap { justify-self: center; }
-  .hero-photo { width: 220px; height: 270px; }
-  .hero-photo-placeholder { width: 220px; height: 270px; }
+  .hero-bg-photo { width: 100%; opacity: 0.4; }
+  .hero-bg-photo::before { background: linear-gradient(to bottom, #000814 0%, rgba(0,8,20,0.5) 50%, #000814 100%); }
 
   /* About */
   .about-section { padding: 60px 0; }
@@ -1413,7 +1440,6 @@ hr.divider {
   .hero-heading { font-size: 26px; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; justify-content: center; }
-  .hero-photo { width: 180px; height: 220px; }
 }
 </style>
 </head>
@@ -1451,6 +1477,7 @@ hr.divider {
 
   <!-- Hero -->
   <section class="hero">
+    <div class="hero-bg-photo"></div>
     <div class="hero-inner">
       <div class="hero-text fade-in">
         <h1 class="hero-heading">
@@ -1471,12 +1498,6 @@ hr.divider {
         </div>
       </div>
 
-      <div class="hero-photo-wrap fade-in delay-2">
-        <img src="hesam-portrait.jpeg" alt="Hesam Teymouri Athar"
-             class="hero-photo"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div class="hero-photo-placeholder" style="display:none;">HT</div>
-      </div>
     </div>
   </section>
 
