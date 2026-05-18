@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found — Hesam Teymouri Athar, Ph.D.</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #003566;
+    --blue-dark: #001d3d;
+    --blue-darkest: #000814;
+    --gold: #cca000;
+    --gold-bright: #f5cc00;
+    --white: #ffffff;
+    --bg: #f3f7fa;
+    --text-muted: #5a7385;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Navbar */
+  nav {
+    background: var(--white);
+    border-bottom: 1px solid #d4dde8;
+    padding: 0 40px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--blue-darkest);
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .nav-logo-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--blue-darkest);
+    color: var(--gold);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Hero area */
+  .error-hero {
+    background: linear-gradient(135deg, #000814 0%, #001d3d 50%, #003566 100%);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Decorative background number */
+  .error-bg-number {
+    position: absolute;
+    font-size: 320px;
+    font-weight: 800;
+    color: rgba(255,255,255,0.03);
+    line-height: 1;
+    user-select: none;
+    letter-spacing: -10px;
+  }
+
+  .error-content {
+    position: relative;
+    z-index: 1;
+    max-width: 540px;
+  }
+
+  .error-code {
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+  }
+
+  .error-title {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 14px;
+  }
+
+  .error-desc {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+
+  .error-actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 28px;
+    background: var(--gold);
+    color: var(--blue-darkest);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn-home:hover {
+    background: var(--gold-bright);
+    transform: translateY(-2px);
+  }
+
+  .btn-research {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 28px;
+    background: transparent;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .btn-research:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: translateY(-2px);
+  }
+
+  /* Quick links */
+  .error-links {
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .error-links p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .quick-links {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .quick-links a {
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .quick-links a:hover {
+    color: var(--gold);
+    border-color: var(--gold);
+  }
+
+  @media (max-width: 480px) {
+    .error-code { font-size: 72px; }
+    .error-title { font-size: 20px; }
+    .error-bg-number { font-size: 200px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">
+    <div class="nav-logo-icon">HT</div>
+    H. Teymouri Athar
+  </a>
+</nav>
+
+<div class="error-hero">
+  <div class="error-bg-number">404</div>
+  <div class="error-content">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Page Not Found</h1>
+    <p class="error-desc">The page you're looking for doesn't exist or may have been moved. Let's get you back on track.</p>
+
+    <div class="error-actions">
+      <a href="/" class="btn-home">
+        ← Back to Home
+      </a>
+      <a href="/#research" onclick="window.location.href='/'; setTimeout(()=>showTab&&showTab('research'),300);" class="btn-research">
+        View Research
+      </a>
+    </div>
+
+    <div class="error-links">
+      <p>Quick links</p>
+      <div class="quick-links">
+        <a href="/">Home</a>
+        <a href="/principles-of-marketing.html">Principles of Marketing</a>
+        <a href="/digital-marketing.html">Digital Marketing</a>
+        <a href="/marketing-analytics.html">Marketing Analytics</a>
+        <a href="/ai-in-marketing.html">AI in Marketing</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
