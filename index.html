@@ -116,6 +116,12 @@ nav {
   white-space: nowrap;
 }
 
+.nav-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .tabButton:hover {
   color: var(--gold);
   background: rgba(204,160,0,0.1);
@@ -1123,6 +1129,14 @@ nav {
   padding: 36px 32px;
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: default;
+}
+
+.position-card:hover {
+  transform: translateY(-6px);
+  background: var(--blue-dark);
+  box-shadow: 0 20px 48px rgba(0,8,20,0.3), 0 0 0 3px rgba(204,160,0,0.5);
 }
 
 .position-card::before {
@@ -1274,36 +1288,132 @@ hr.divider {
 .delay-3 { animation-delay: 0.3s; }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 1024px) {
-  .areas-grid { grid-template-columns: repeat(2, 1fr); }
-  .background-inner { grid-template-columns: 1fr; gap: 48px; }
+/* ── HAMBURGER ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: 8px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+.hamburger:hover { background: var(--blue-light); }
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 68px;
+  left: 0; right: 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(0,8,20,0.1);
+  flex-direction: column;
+  padding: 12px 20px 20px;
+  gap: 4px;
+  z-index: 999;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu .tabButton {
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+.mobile-menu .btn-nav-cta {
+  margin-left: 0 !important;
+  margin-top: 8px;
+  text-align: center;
 }
 
+/* ── TABLET (1024px) ── */
+@media (max-width: 1024px) {
+  .areas-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-inner { gap: 40px; }
+}
+
+/* ── TABLET PORTRAIT (900px) ── */
 @media (max-width: 900px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 32px; }
   .hero-photo-wrap { justify-self: center; }
-  .about-inner { grid-template-columns: 1fr; gap: 40px; }
-  .about-photo-wrap { margin: 0 auto; }
+  .hero-photo { width: 260px; height: 320px; }
+  .hero-photo-placeholder { width: 260px; height: 320px; }
+  .about-inner { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .about-affiliations { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+  .affil-card { flex: 1; min-width: 220px; }
   .contact-layout { grid-template-columns: 1fr; }
-  .research-card { grid-template-columns: 1fr; gap: 14px; padding: 24px 20px; }
-  .page { padding: 40px 20px; }
+  .research-card { grid-template-columns: 1fr; gap: 12px; padding: 24px 20px; }
+  .page { padding: 40px 24px; }
   .nav-inner { padding: 0 20px; }
 }
 
+/* ── MOBILE (640px) ── */
 @media (max-width: 640px) {
-  .hero { padding: 60px 0 0; }
-  .hero-inner { padding: 0 20px; }
-  .hero-stats { gap: 20px; }
-  .about-inner { padding: 0 20px; }
-  .areas-grid { grid-template-columns: 1fr 1fr; }
-  .about-facts { grid-template-columns: 1fr; }
-  .footer-inner { flex-direction: column; text-align: center; }
-  .footer-links { justify-content: center; }
+  /* Navbar */
+  .nav-wordmark { font-size: 13px; }
+  .nav-tabs { display: none; }
+  .hamburger { display: flex; }
+
+  /* Hero */
+  .hero { padding: 60px 0 50px; }
+  .hero-inner { padding: 0 20px; grid-template-columns: 1fr; }
+  .hero-text { padding-bottom: 0; }
+  .hero-heading { font-size: clamp(28px, 8vw, 38px); letter-spacing: -0.5px; }
+  .hero-tagline { font-size: 15px; }
+  .hero-actions { gap: 10px; }
+  .hero-actions .btn { font-size: 13px; padding: 10px 18px; }
+  .hero-photo-wrap { justify-self: center; }
+  .hero-photo { width: 220px; height: 270px; }
+  .hero-photo-placeholder { width: 220px; height: 270px; }
+
+  /* About */
+  .about-section { padding: 60px 0; }
+  .about-inner { padding: 0 20px !important; }
+  .about-text h2 { font-size: 26px; }
+  .about-affiliations { flex-direction: column; }
+  .affil-card { min-width: unset; }
+
+  /* Sections */
+  .page { padding: 40px 16px; }
+  .section-title { font-size: 26px; }
+  .areas-grid { grid-template-columns: 1fr; }
   .teaching-grid { grid-template-columns: 1fr; }
+
+  /* Research */
+  .research-card { padding: 20px 16px; }
+  .research-card h3 { font-size: 15px; }
+
+  /* Contact */
+  .contact-main h2 { font-size: 26px; }
+
+  /* Footer */
+  .footer-inner { flex-direction: column; align-items: center; text-align: center; gap: 12px; }
+  .footer-links { justify-content: center; }
+  footer { padding: 32px 20px; }
 }
 
+/* ── SMALL MOBILE (400px) ── */
 @media (max-width: 400px) {
-  .areas-grid { grid-template-columns: 1fr; }
+  .hero-heading { font-size: 26px; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+  .hero-photo { width: 180px; height: 220px; }
 }
 </style>
 </head>
@@ -1316,10 +1426,21 @@ hr.divider {
       <div class="nav-logo-icon">HT</div>
       <span class="nav-wordmark">H. Teymouri Athar</span>
     </a>
-    <button class="tabButton active" onclick="showTab('home', this)">Home</button>
-    <button class="tabButton" onclick="showTab('research', this)">Research</button>
-    <button class="tabButton" onclick="showTab('teaching', this)">Teaching</button>
-    <button class="tabButton btn-nav-cta" onclick="showTab('contact', this)">Contact</button>
+    <div class="nav-tabs">
+      <button class="tabButton active" onclick="showTab('home', this)">Home</button>
+      <button class="tabButton" onclick="showTab('research', this)">Research</button>
+      <button class="tabButton" onclick="showTab('teaching', this)">Teaching</button>
+      <button class="tabButton btn-nav-cta" onclick="showTab('contact', this)">Contact</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="tabButton" onclick="showTab('home', this); closeMenu()">Home</button>
+    <button class="tabButton" onclick="showTab('research', this); closeMenu()">Research</button>
+    <button class="tabButton" onclick="showTab('teaching', this); closeMenu()">Teaching</button>
+    <button class="tabButton btn-nav-cta" onclick="showTab('contact', this); closeMenu()">Contact</button>
   </div>
 </nav>
 
@@ -1814,6 +1935,18 @@ hr.divider {
 </footer>
 
 <script>
+function toggleMenu() {
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+  hamburger.classList.toggle('open');
+  menu.classList.toggle('open');
+}
+
+function closeMenu() {
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
 function showTab(tabId, element) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   const target = document.getElementById(tabId);
