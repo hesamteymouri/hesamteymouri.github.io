@@ -4,289 +4,306 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Principles of Marketing | Hesam Teymouri Athar</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
-  --navy: #001d3d;
-  --navy-mid: #000814;
-  --navy-light: #003566;
+  --blue: #003566;
+  --blue-dark: #001d3d;
+  --blue-darkest: #000814;
   --gold: #cca000;
-  --gold-light: #f5cc00;
-  --cream: #f3f7fa;
-  --off-white: #edf3f8;
-  --text-dark: #000814;
+  --gold-bright: #f5cc00;
+  --bg: #f3f7fa;
+  --white: #ffffff;
+  --border: #d4dde8;
+  --text: #000814;
   --text-mid: #1e3a55;
   --text-muted: #5a7385;
-  --border: rgba(0,8,20,0.10);
-  --radius: 4px;
-  --radius-lg: 10px;
 }
-
 html { scroll-behavior: smooth; }
-
 body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--cream);
-  color: var(--text-dark);
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.7;
   font-weight: 400;
 }
 
 /* ── NAV ── */
 nav {
-  background: #fff;
+  background: var(--white);
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
-
 .nav-inner {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
   display: flex;
   align-items: center;
+  gap: 4px;
 }
-
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  margin-right: auto;
+  padding: 14px 0;
+}
+.nav-logo {
+  width: 32px;
+  height: 32px;
+  background: var(--blue-darkest);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.nav-logo span {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+}
 .nav-wordmark {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
   font-weight: 600;
-  color: var(--navy);
-  margin-right: auto;
-  padding: 16px 0;
+  color: var(--blue-dark);
   letter-spacing: -0.2px;
   white-space: nowrap;
-  text-decoration: none;
 }
-
 nav a.nav-link {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: var(--text-muted);
   text-decoration: none;
-  padding: 20px 18px;
+  padding: 20px 14px;
   position: relative;
   transition: color 0.2s;
   letter-spacing: 0.01em;
   display: inline-block;
 }
-
-nav a.nav-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0; left: 18px; right: 18px;
-  height: 2px;
-  background: var(--navy);
-  transform: scaleX(0);
-  transition: transform 0.25s ease;
+nav a.nav-link:hover { color: var(--blue-dark); }
+.nav-contact {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--gold);
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  margin-left: 8px;
+  transition: background 0.18s;
+  white-space: nowrap;
 }
+.nav-contact:hover { background: var(--gold-bright); }
 
-nav a.nav-link:hover { color: var(--navy); }
-nav a.nav-link:hover::after { transform: scaleX(0.4); }
-
-/* ── COURSE HEADER ── */
-.course-header {
-  background: var(--navy);
+/* ── HERO ── */
+.course-hero {
+  background: linear-gradient(135deg, var(--blue-darkest) 0%, var(--blue-dark) 50%, var(--blue) 100%);
   position: relative;
   overflow: hidden;
 }
-
-.course-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 60% 80% at 80% 50%, rgba(201,168,76,0.10) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 60% at 10% 20%, rgba(255,255,255,0.04) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-.course-header::after {
+.course-hero::after {
   content: "";
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  height: 3px;
+  background: var(--gold);
 }
-
-.course-header-inner {
+.course-hero-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 56px 40px 52px;
+  padding: 48px 40px 56px;
   position: relative;
   z-index: 1;
 }
-
+.hero-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  margin-bottom: 28px;
+  transition: color 0.18s;
+}
+.hero-breadcrumb:hover { color: rgba(255,255,255,0.85); }
+.hero-breadcrumb svg { flex-shrink: 0; }
 .course-eyebrow {
-  font-family: 'DM Mono', monospace;
+  font-family: 'Inter', sans-serif;
   font-size: 11px;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold);
   display: block;
   margin-bottom: 14px;
 }
-
-.course-header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(28px, 3.5vw, 44px);
+.course-hero h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(30px, 4vw, 48px);
   font-weight: 700;
-  color: #fff;
-  line-height: 1.15;
+  color: var(--white);
+  line-height: 1.12;
   margin-bottom: 16px;
   letter-spacing: -0.5px;
 }
-
-.course-header p {
+.course-hero-subtitle {
   font-size: 17px;
-  color: rgba(255,255,255,0.65);
-  max-width: 620px;
+  color: rgba(255,255,255,0.62);
+  max-width: 600px;
   line-height: 1.65;
   font-weight: 300;
 }
 
-/* ── LAYOUT ── */
-.content {
-  max-width: 1000px;
+/* ── INFO STRIP ── */
+.info-strip {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+.info-strip-inner {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 48px 40px 60px;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.info-stat {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-mid);
+  padding: 18px 0;
+}
+.info-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--border);
+  margin: 0 24px;
+  flex-shrink: 0;
 }
 
-/* ── SECTION BOX ── */
-.section-box {
-  background: #fff;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  padding: 36px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 16px rgba(0,8,20,0.05);
+/* ── CONTENT ── */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 40px 64px;
 }
 
-.section-eyebrow {
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.18em;
+/* ── SECTIONS ── */
+.section {
+  margin-bottom: 48px;
+}
+.section-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--gold);
   display: block;
-  margin-bottom: 10px;
-}
-
-.section-box h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 26px;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 18px;
-  letter-spacing: -0.3px;
-}
-
-.section-box h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--navy);
   margin-bottom: 8px;
 }
-
-.section-box p {
+.section h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 20px;
+  letter-spacing: -0.3px;
+}
+.section p {
   font-size: 15.5px;
   color: var(--text-mid);
-  line-height: 1.75;
-  font-weight: 300;
+  line-height: 1.78;
+  font-weight: 400;
   margin-bottom: 14px;
 }
+.section p:last-child { margin-bottom: 0; }
 
-.section-box p:last-child { margin-bottom: 0; }
-
-.section-box ul {
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.section-box ul li {
-  font-size: 15.5px;
-  color: var(--text-mid);
-  line-height: 1.65;
-  font-weight: 300;
-}
-
-/* ── HIGHLIGHT GRID ── */
-.highlight-grid {
+/* ── OBJECTIVES ── */
+.objectives-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
-  margin-top: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 24px;
+}
+.objective-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--text-mid);
+  line-height: 1.6;
+  font-weight: 400;
+}
+.objective-check {
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 15px;
+  flex-shrink: 0;
+  margin-top: 1px;
 }
 
+/* ── TOPIC CARDS ── */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 4px;
+}
 .card {
-  background: var(--cream);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  background: var(--white);
+  border: 2px solid transparent;
+  border-radius: 8px;
   padding: 24px;
-  position: relative;
-  overflow: hidden;
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
-
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--gold), var(--navy));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
 .card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 32px rgba(0,8,20,0.09);
-  border-color: rgba(0,8,20,0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0,8,20,0.10);
+  border-color: var(--gold);
 }
-
-.card:hover::before { transform: scaleX(1); }
-
-.card p { margin-bottom: 0; font-size: 14.5px; }
-
-/* ── BACK LINK ── */
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
+.card h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--blue-dark);
+  margin-bottom: 8px;
+  letter-spacing: -0.1px;
+}
+.card p {
   font-size: 14px;
-  font-weight: 500;
-  color: var(--navy);
-  text-decoration: none;
-  padding: 10px 18px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  margin-top: 8px;
-  transition: all 0.18s;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-weight: 400;
+  margin-bottom: 0;
 }
 
-.back-link:hover {
-  background: var(--navy);
-  color: #fff;
-  border-color: var(--navy);
+/* ── PEDAGOGY BLOCKQUOTE ── */
+.pedagogy-block {
+  border-left: 3px solid var(--gold);
+  padding-left: 20px;
+}
+.pedagogy-block p {
+  font-style: italic;
+  color: var(--text-mid);
 }
 
 /* ── FOOTER ── */
 footer {
-  background: var(--navy);
-  border-top: 1px solid rgba(255,255,255,0.08);
+  background: var(--blue-darkest);
   padding: 28px 40px;
 }
-
 .footer-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -296,58 +313,77 @@ footer {
   gap: 20px;
   flex-wrap: wrap;
 }
-
 .footer-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 15px;
-  color: rgba(255,255,255,0.7);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.65);
 }
-
 .footer-copy {
   font-size: 13px;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.3);
 }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .nav-inner { padding: 0 16px; }
   nav a.nav-link { padding: 18px 10px; font-size: 13px; }
-  .course-header-inner { padding: 40px 20px 36px; }
+  .course-hero-inner { padding: 36px 20px 44px; }
+  .info-strip-inner { padding: 0 20px; }
+  .info-divider { margin: 0 16px; }
   .content { padding: 32px 20px 48px; }
-  .section-box { padding: 24px 20px; }
-  .highlight-grid { grid-template-columns: 1fr; }
+  .objectives-grid { grid-template-columns: 1fr; }
+  .cards-grid { grid-template-columns: 1fr; }
   .footer-inner { justify-content: center; text-align: center; }
+  footer { padding: 24px 20px; }
+}
+@media (max-width: 480px) {
+  .info-strip-inner { flex-direction: column; align-items: flex-start; gap: 0; }
+  .info-divider { display: none; }
+  .info-stat { padding: 10px 0; border-bottom: 1px solid var(--border); width: 100%; }
+  .info-stat:last-child { border-bottom: none; }
 }
 </style>
 </head>
-
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-wordmark">H. Teymouri Athar</a>
-    <a href="index.html?tab=home" class="nav-link">Home</a>
-    <a href="index.html?tab=research" class="nav-link">Research</a>
-    <a href="index.html?tab=teaching" class="nav-link">Teaching</a>
-    <a href="index.html?tab=contact" class="nav-link">Contact</a>
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo"><span>HT</span></div>
+      <span class="nav-wordmark">H. Teymouri Athar</span>
+    </a>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="index.html#research" class="nav-link">Research</a>
+    <a href="index.html#teaching" class="nav-link">Teaching</a>
+    <a href="index.html#contact" class="nav-contact">Contact</a>
   </div>
 </nav>
 
-<!-- COURSE HEADER -->
-<div class="course-header">
-  <div class="course-header-inner">
+<div class="course-hero">
+  <div class="course-hero-inner">
+    <a href="index.html#teaching" class="hero-breadcrumb">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Teaching
+    </a>
     <span class="course-eyebrow">Course</span>
     <h1>Principles of Marketing</h1>
-    <p>Foundational marketing, customer value creation, and real-world case-based problem solving.</p>
+    <p class="course-hero-subtitle">Foundational marketing, customer value creation, and real-world case-based problem solving.</p>
   </div>
 </div>
 
-<!-- CONTENT -->
+<div class="info-strip">
+  <div class="info-strip-inner">
+    <span class="info-stat">University of New Haven</span>
+    <div class="info-divider"></div>
+    <span class="info-stat">Pompea College of Business</span>
+  </div>
+</div>
+
 <div class="content">
 
-  <div class="section-box">
-    <span class="section-eyebrow">Overview</span>
+  <div class="section">
+    <span class="section-label">Overview</span>
     <h2>Course Description</h2>
     <p>
       This course introduces students to the core principles of marketing through a hands-on and collaborative approach. Students learn how marketing creates and exchanges value across products, services, ideas, and people while building a strong foundation in key marketing concepts, including the six Ps of marketing—product, price, place, promotion, people, and process.
@@ -357,25 +393,25 @@ footer {
     </p>
   </div>
 
-  <div class="section-box">
-    <span class="section-eyebrow">Objectives</span>
+  <div class="section">
+    <span class="section-label">Objectives</span>
     <h2>Course Objectives</h2>
-    <ul>
-      <li>Understand the basic principles and strategic role of marketing</li>
-      <li>Explain how firms create, communicate, and deliver customer value</li>
-      <li>Approach real-world business problems from a marketing perspective</li>
-      <li>Apply core concepts such as segmentation, targeting, positioning, and the marketing mix</li>
-      <li>Understand the role of market research and empirical observation in marketing decisions</li>
-      <li>Work productively in teams and communicate marketing ideas effectively</li>
-      <li>Strengthen written communication through applied marketing assignments</li>
-      <li>Recognize the importance of ethics and inclusivity in marketing practice</li>
-    </ul>
+    <div class="objectives-grid">
+      <div class="objective-item"><span class="objective-check">✓</span><span>Understand the basic principles and strategic role of marketing</span></div>
+      <div class="objective-item"><span class="objective-check">✓</span><span>Explain how firms create, communicate, and deliver customer value</span></div>
+      <div class="objective-item"><span class="objective-check">✓</span><span>Approach real-world business problems from a marketing perspective</span></div>
+      <div class="objective-item"><span class="objective-check">✓</span><span>Apply core concepts such as segmentation, targeting, positioning, and the marketing mix</span></div>
+      <div class="objective-item"><span class="objective-check">✓</span><span>Understand the role of market research and empirical observation in marketing decisions</span></div>
+      <div class="objective-item"><span class="objective-check">✓</span><span>Work productively in teams and communicate marketing ideas effectively</span></div>
+      <div class="objective-item"><span class="objective-check">✓</span><span>Strengthen written communication through applied marketing assignments</span></div>
+      <div class="objective-item"><span class="objective-check">✓</span><span>Recognize the importance of ethics and inclusivity in marketing practice</span></div>
+    </div>
   </div>
 
-  <div class="section-box">
-    <span class="section-eyebrow">Topics</span>
+  <div class="section">
+    <span class="section-label">Topics</span>
     <h2>What Students Learn</h2>
-    <div class="highlight-grid">
+    <div class="cards-grid">
 
       <div class="card">
         <h3>Customer Value and Exchange</h3>
@@ -397,16 +433,16 @@ footer {
         <p>Students develop an understanding of product, price, place, and promotion decisions and how these elements work together to support marketing strategy.</p>
       </div>
 
-  <div class="card">
-    <h3>Marketing Analytics and Research</h3>
-    <p>Students learn how data, analytics, and research methods are used to understand customer behavior and inform evidence-based marketing decisions.</p>
-</div>
+      <div class="card">
+        <h3>Marketing Analytics and Research</h3>
+        <p>Students learn how data, analytics, and research methods are used to understand customer behavior and inform evidence-based marketing decisions.</p>
+      </div>
 
       <div class="card">
-    <h3>Digital Marketing</h3>
-    <p>Students examine how digital channels, platforms, and technologies shape modern marketing, and how firms use contemporary marketing methods to engage customers across the digital customer journey.</p>
-</div>
-      
+        <h3>Digital Marketing</h3>
+        <p>Students examine how digital channels, platforms, and technologies shape modern marketing, and how firms use contemporary marketing methods to engage customers across the digital customer journey.</p>
+      </div>
+
       <div class="card">
         <h3>Case-Based Problem Solving</h3>
         <p>Students act as marketing consultants and respond to real business cases, applying course concepts to practical managerial challenges.</p>
@@ -425,25 +461,21 @@ footer {
     </div>
   </div>
 
-  <div class="section-box">
-    <span class="section-eyebrow">Pedagogy</span>
+  <div class="section">
+    <span class="section-label">Pedagogy</span>
     <h2>Applied Learning</h2>
-    <p>
-      A major component of the course is the use of real-world marketing case studies. Each week, students engage with an actual business problem and apply marketing concepts to generate practical solutions. This structure helps students connect theory to realistic marketplace situations.
-    </p>
-    <p>
-      The course also includes quizzes, written work, case analysis, team collaboration, and exams, allowing students to demonstrate both conceptual understanding and applied problem-solving skills throughout the semester.
-    </p>
+    <div class="pedagogy-block">
+      <p>
+        A major component of the course is the use of real-world marketing case studies. Each week, students engage with an actual business problem and apply marketing concepts to generate practical solutions. This structure helps students connect theory to realistic marketplace situations.
+      </p>
+      <p>
+        The course also includes quizzes, written work, case analysis, team collaboration, and exams, allowing students to demonstrate both conceptual understanding and applied problem-solving skills throughout the semester.
+      </p>
+    </div>
   </div>
-
-  <a href="index.html" class="back-link">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-    Back to homepage
-  </a>
 
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <span class="footer-name">Hesam Teymouri Athar, Ph.D.</span>
