@@ -84,15 +84,16 @@ nav {
   text-decoration: none;
 }
 
-.nav-logo-icon {
-  width: 36px; height: 36px;
-  background: var(--blue);
+.nav-logo-img {
+  height: 44px;
+  width: auto;
   border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  color: white;
-  font-size: 14px;
-  font-weight: 700;
   flex-shrink: 0;
+  transition: opacity 0.2s;
+}
+
+.nav-logo-img:hover {
+  opacity: 0.85;
 }
 
 .nav-wordmark {
@@ -1457,8 +1458,7 @@ hr.divider {
 <nav>
   <div class="nav-inner">
     <a class="nav-logo" href="#" onclick="showTab('home'); return false;">
-      <div class="nav-logo-icon">HT</div>
-      <span class="nav-wordmark">H. Teymouri Athar</span>
+      <img src="ht-logo.png" alt="Hesam Teymouri Athar, Ph.D." class="nav-logo-img">
     </a>
     <div class="nav-tabs">
       <button class="tabButton active" onclick="showTab('home', this)">Home</button>
