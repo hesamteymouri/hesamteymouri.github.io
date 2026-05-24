@@ -54,22 +54,15 @@ nav {
   margin-right: auto;
   padding: 14px 0;
 }
-.nav-logo {
-  width: 32px;
-  height: 32px;
-  background: var(--blue-darkest);
+.nav-logo-img {
+  height: 44px;
+  width: auto;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-shrink: 0;
+  transition: opacity 0.2s;
 }
-.nav-logo span {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--gold);
-  letter-spacing: 0.02em;
+.nav-logo-img:hover {
+  opacity: 0.85;
 }
 .nav-wordmark {
   font-family: 'Inter', sans-serif;
@@ -351,8 +344,7 @@ footer {
 <nav>
   <div class="nav-inner">
     <a href="/" class="nav-brand">
-      <div class="nav-logo"><span>HT</span></div>
-      <span class="nav-wordmark">H. Teymouri Athar</span>
+      <img src="ht-logo.png" alt="Hesam Teymouri Athar, Ph.D." class="nav-logo-img">
     </a>
     <a href="/" class="nav-link">Home</a>
     <a href="/?tab=research" class="nav-link">Research</a>
