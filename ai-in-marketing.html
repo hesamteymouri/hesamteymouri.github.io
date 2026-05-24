@@ -361,6 +361,16 @@ footer {
   gap: 20px;
   flex-wrap: wrap;
 }
+.footer-logo-img {
+  height: 52px;
+  width: auto;
+  border-radius: 8px;
+  opacity: 0.90;
+  transition: opacity 0.2s;
+}
+.footer-logo-img:hover {
+  opacity: 1;
+}
 .footer-name {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
@@ -543,8 +553,8 @@ footer {
 
 <footer>
   <div class="footer-inner">
-    <span class="footer-name">Hesam Teymouri Athar, Ph.D.</span>
-    <span class="footer-copy">© 2026</span>
+    <img src="ht-logo.png" alt="Hesam Teymouri Athar, Ph.D." class="footer-logo-img">
+    <span class="footer-copy">© 2026 Hesam Teymouri Athar</span>
   </div>
 </footer>
 
