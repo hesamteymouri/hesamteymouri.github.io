@@ -165,7 +165,7 @@ nav a.nav-link:hover { color: var(--blue-dark); }
 }
 
 /* ── SECTIONS ── */
-.section { margin-bottom: 52px; }
+.section { margin-bottom: 48px; }
 .section-label {
   font-family: 'Inter', sans-serif;
   font-size: 10.5px;
@@ -261,136 +261,6 @@ nav a.nav-link:hover { color: var(--blue-dark); }
   color: var(--text-mid);
 }
 
-/* ── GRADING TABLE ── */
-.grade-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  margin-top: 4px;
-}
-.grade-table th {
-  background: var(--blue-dark);
-  color: var(--white);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 13px 18px;
-  text-align: left;
-}
-.grade-table td {
-  padding: 13px 18px;
-  font-size: 14.5px;
-  color: var(--text-mid);
-  border-bottom: 1px solid var(--border);
-  background: var(--white);
-}
-.grade-table tr:last-child td { border-bottom: none; }
-.grade-table tr:hover td { background: var(--bg); }
-.grade-table .total-row td {
-  font-weight: 700;
-  color: var(--blue-dark);
-  background: var(--bg);
-}
-.grade-badge {
-  display: inline-block;
-  background: var(--blue-darkest);
-  color: var(--gold);
-  font-size: 12px;
-  font-weight: 600;
-  padding: 3px 10px;
-  border-radius: 20px;
-}
-
-/* ── SCHEDULE TABLE ── */
-.schedule-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  margin-top: 4px;
-}
-.schedule-table th {
-  background: var(--blue-dark);
-  color: var(--white);
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 12px 16px;
-  text-align: left;
-}
-.schedule-table td {
-  padding: 12px 16px;
-  font-size: 13.5px;
-  color: var(--text-mid);
-  border-bottom: 1px solid var(--border);
-  background: var(--white);
-  vertical-align: top;
-}
-.schedule-table tr:last-child td { border-bottom: none; }
-.schedule-table tr:hover td { background: var(--bg); }
-.schedule-table .week-num {
-  font-weight: 700;
-  color: var(--blue-dark);
-  white-space: nowrap;
-}
-.schedule-table .break-row td {
-  background: #fff8e6;
-  color: var(--text-muted);
-  font-style: italic;
-}
-.schedule-table .exam-row td {
-  background: #f0f4ff;
-}
-.milestone-tag {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--gold);
-  background: rgba(204,160,0,0.08);
-  border: 1px solid rgba(204,160,0,0.25);
-  border-radius: 4px;
-  padding: 2px 7px;
-  margin-top: 4px;
-}
-
-/* ── CASES TABLE ── */
-.cases-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  margin-top: 4px;
-}
-.cases-table th {
-  background: var(--blue-dark);
-  color: var(--white);
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 12px 16px;
-  text-align: left;
-}
-.cases-table td {
-  padding: 12px 16px;
-  font-size: 13.5px;
-  color: var(--text-mid);
-  border-bottom: 1px solid var(--border);
-  background: var(--white);
-  vertical-align: top;
-  line-height: 1.55;
-}
-.cases-table tr:last-child td { border-bottom: none; }
-.cases-table tr:hover td { background: var(--bg); }
-.case-title { font-weight: 500; color: var(--blue-dark); }
-.case-meta { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
-
 /* ── RESOURCES ── */
 .resource-list {
   display: flex;
@@ -483,10 +353,6 @@ footer {
   .cards-grid { grid-template-columns: 1fr; }
   .footer-inner { justify-content: center; text-align: center; }
   footer { padding: 24px 20px; }
-  .grade-table, .schedule-table, .cases-table { font-size: 13px; }
-  .grade-table th, .grade-table td,
-  .schedule-table th, .schedule-table td,
-  .cases-table th, .cases-table td { padding: 10px 12px; }
 }
 </style>
 </head>
@@ -518,7 +384,6 @@ footer {
 
 <div class="content">
 
-  <!-- Description -->
   <div class="section">
     <span class="section-label">Overview</span>
     <h2>Course Description</h2>
@@ -530,7 +395,6 @@ footer {
     </p>
   </div>
 
-  <!-- Learning Outcomes -->
   <div class="section">
     <span class="section-label">Objectives</span>
     <h2>Course Learning Outcomes</h2>
@@ -546,7 +410,6 @@ footer {
     </div>
   </div>
 
-  <!-- Topic Cards -->
   <div class="section">
     <span class="section-label">Topics</span>
     <h2>What Students Learn</h2>
@@ -574,12 +437,12 @@ footer {
 
       <div class="card">
         <h3>Customer Insights</h3>
-        <p>Students gather and interpret qualitative and quantitative customer data — including AI-generated synthetic research — to inform strategic decisions.</p>
+        <p>Students gather and interpret qualitative and quantitative customer data, including AI-generated synthetic research, to inform strategic decisions.</p>
       </div>
 
       <div class="card">
         <h3>Market Segmentation</h3>
-        <p>Students identify and evaluate distinct customer segments, using both traditional frameworks and AI-assisted methods to uncover meaningful differences in needs and behavior.</p>
+        <p>Students identify and evaluate distinct customer segments using both traditional frameworks and AI-assisted methods to uncover meaningful differences in needs and behavior.</p>
       </div>
 
       <div class="card">
@@ -605,253 +468,19 @@ footer {
     </div>
   </div>
 
-  <!-- Pedagogy -->
   <div class="section">
     <span class="section-label">Pedagogy</span>
     <h2>Studio-Based Learning</h2>
     <div class="pedagogy-block">
       <p>
-        Each session follows a studio structure: the instructor teaches the week's concept (30–40 min), followed by a break, then teams work on an assigned Harvard Business School case and present their findings to the class. Teams submit a one-page brief on Canvas after each session.
+        Each session follows a studio structure: the instructor teaches the week's concept, followed by a break, then teams work on an assigned Harvard Business School case and present their findings to the class. Teams submit a one-page brief on Canvas after each session.
       </p>
       <p>
-        Across the semester, student teams build a complete AI-driven strategy report for a company of their choice — using AI to generate synthetic customer panels, simulate qualitative research, segment the market, test value propositions, and produce strategic recommendations. Every AI output must be verified against real public evidence, teaching students to use AI critically as an analytical tool rather than a shortcut.
+        Across the semester, student teams build a complete AI-driven strategy report for a company of their choice, using AI to generate synthetic customer panels, simulate qualitative research, segment the market, test value propositions, and produce strategic recommendations. Every AI output must be verified against real public evidence, teaching students to use AI critically as an analytical tool rather than a shortcut.
       </p>
     </div>
   </div>
 
-  <!-- Assessment -->
-  <div class="section">
-    <span class="section-label">Assessment</span>
-    <h2>Grading Breakdown</h2>
-    <table class="grade-table">
-      <thead>
-        <tr>
-          <th>Component</th>
-          <th>Format</th>
-          <th>Weight</th>
-          <th>Points</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Weekly Case Reports (brief + verbal presentation)</td>
-          <td><span class="grade-badge">Team</span></td>
-          <td>40%</td>
-          <td>400</td>
-        </tr>
-        <tr>
-          <td>AI Strategy Report &amp; Final Presentation</td>
-          <td><span class="grade-badge">Team</span></td>
-          <td>30%</td>
-          <td>300</td>
-        </tr>
-        <tr>
-          <td>Midterm Exam (Week 10, in-class)</td>
-          <td><span class="grade-badge">Individual</span></td>
-          <td>15%</td>
-          <td>150</td>
-        </tr>
-        <tr>
-          <td>Participation &amp; In-Class Engagement (includes peer evaluations)</td>
-          <td><span class="grade-badge">Individual</span></td>
-          <td>15%</td>
-          <td>150</td>
-        </tr>
-        <tr class="total-row">
-          <td>Total</td>
-          <td></td>
-          <td>100%</td>
-          <td>1,000</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- Required Cases -->
-  <div class="section">
-    <span class="section-label">Course Materials</span>
-    <h2>Required Cases</h2>
-    <p>All cases are available through the Harvard Business Publishing coursepack at a 50% educator discount. Purchase all cases before Week 2. Total cost: $45.90 for 9 cases ($5.10 per case).</p>
-    <p>Coursepack link: <a href="https://hbsp.harvard.edu/import/1440282" target="_blank" style="color:var(--gold);font-weight:600;">hbsp.harvard.edu/import/1440282</a></p>
-    <br>
-    <table class="cases-table">
-      <thead>
-        <tr>
-          <th>Wk</th>
-          <th>Case</th>
-          <th>Authors</th>
-          <th>HBP #</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="week-num">2</td>
-          <td><span class="case-title">Netflix Beyond Streaming: Strategies for the Next Era of Entertainment</span></td>
-          <td><span class="case-meta">Alcacer, Lucidi (2025)</span></td>
-          <td><span class="case-meta">725429</span></td>
-        </tr>
-        <tr>
-          <td class="week-num">3</td>
-          <td><span class="case-title">Spotify: Face the Music (Update 2024)</span></td>
-          <td><span class="case-meta">Vroom, Sastre Boquet (2024)</span></td>
-          <td><span class="case-meta">I00018</span></td>
-        </tr>
-        <tr>
-          <td class="week-num">4</td>
-          <td><span class="case-title">Airbnb, Etsy, Uber: Acquiring the First Thousand Customers</span></td>
-          <td><span class="case-meta">Teixeira, Brown (2016)</span></td>
-          <td><span class="case-meta">516094</span></td>
-        </tr>
-        <tr>
-          <td class="week-num">5</td>
-          <td><span class="case-title">The Video-Streaming Wars in 2025: Can Anyone Catch Netflix?</span></td>
-          <td><span class="case-meta">Elberse, Larenas (2025)</span></td>
-          <td><span class="case-meta">525059</span></td>
-        </tr>
-        <tr>
-          <td class="week-num">6</td>
-          <td><span class="case-title">McDonald's</span></td>
-          <td><span class="case-meta">Quelch, Herman (2007)</span></td>
-          <td><span class="case-meta">508025</span></td>
-        </tr>
-        <tr>
-          <td class="week-num">7</td>
-          <td><span class="case-title">Trader Joe's</span></td>
-          <td><span class="case-meta">Ager, Roberto (2013)</span></td>
-          <td><span class="case-meta">714419</span></td>
-        </tr>
-        <tr>
-          <td class="week-num">12</td>
-          <td><span class="case-title">Southwest Airlines: In a Different World</span></td>
-          <td><span class="case-meta">Heskett, Sasser (2010)</span></td>
-          <td><span class="case-meta">910419</span></td>
-        </tr>
-        <tr>
-          <td class="week-num">13</td>
-          <td><span class="case-title">Patagonia: "Earth Is Now Our Only Shareholder"</span></td>
-          <td><span class="case-meta">Trelstad et al. (2023)</span></td>
-          <td><span class="case-meta">323057</span></td>
-        </tr>
-        <tr>
-          <td class="week-num">14</td>
-          <td><span class="case-title">Amazon in 2026</span></td>
-          <td><span class="case-meta">Gupta, Rodriguez (2013, rev. 2026)</span></td>
-          <td><span class="case-meta">514025</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- Schedule -->
-  <div class="section">
-    <span class="section-label">Schedule</span>
-    <h2>Content Calendar — Fall 2026</h2>
-    <p style="margin-bottom:16px;">Class meets Tuesdays, August 25 – December 1, 2026. Week 9 (Fall Break) is cancelled with no make-up.</p>
-    <table class="schedule-table">
-      <thead>
-        <tr>
-          <th>Wk</th>
-          <th>Date</th>
-          <th>Topic</th>
-          <th>Milestone</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="week-num">1</td>
-          <td>Aug 25</td>
-          <td>Course Introduction &amp; Syllabus</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td class="week-num">2</td>
-          <td>Sep 1</td>
-          <td>What Is Customer Value? <span class="case-meta">· Netflix Beyond Streaming</span></td>
-          <td><span class="milestone-tag">Form teams · Choose company</span></td>
-        </tr>
-        <tr>
-          <td class="week-num">3</td>
-          <td>Sep 8</td>
-          <td>AI as a Strategic Analyst <span class="case-meta">· Spotify: Face the Music</span></td>
-          <td><span class="milestone-tag">Begin AI project: synthetic customer panel</span></td>
-        </tr>
-        <tr>
-          <td class="week-num">4</td>
-          <td>Sep 15</td>
-          <td>Customer Journey Design <span class="case-meta">· Airbnb, Etsy, Uber</span></td>
-          <td><span class="milestone-tag">AI project: map customer journey</span></td>
-        </tr>
-        <tr>
-          <td class="week-num">5</td>
-          <td>Sep 22</td>
-          <td>Industry Attractiveness <span class="case-meta">· Video-Streaming Wars 2025</span></td>
-          <td><span class="milestone-tag">AI project: industry analysis</span></td>
-        </tr>
-        <tr>
-          <td class="week-num">6</td>
-          <td>Sep 29</td>
-          <td>Customer Insights <span class="case-meta">· McDonald's</span></td>
-          <td><span class="milestone-tag">AI project: synthetic qualitative research</span></td>
-        </tr>
-        <tr>
-          <td class="week-num">7</td>
-          <td>Oct 6</td>
-          <td>Segmentation <span class="case-meta">· Trader Joe's</span></td>
-          <td><span class="milestone-tag">AI project: segment the market</span></td>
-        </tr>
-        <tr>
-          <td class="week-num">8</td>
-          <td>Oct 13</td>
-          <td>Branding &amp; Positioning <span class="case-meta">· Lay's 2025 rebrand (public discussion)</span></td>
-          <td><span class="milestone-tag">AI project: positioning</span></td>
-        </tr>
-        <tr class="break-row">
-          <td class="week-num">9</td>
-          <td>Oct 20</td>
-          <td>Fall Break — No Class</td>
-          <td></td>
-        </tr>
-        <tr class="exam-row">
-          <td class="week-num">10</td>
-          <td>Oct 27</td>
-          <td>Midterm Exam (covers Weeks 1–8)</td>
-          <td><span class="milestone-tag">Midterm Exam — Individual</span></td>
-        </tr>
-        <tr>
-          <td class="week-num">11</td>
-          <td>Nov 3</td>
-          <td>Presentation &amp; Discussion Week</td>
-          <td><span class="milestone-tag">Interim AI project check-in</span></td>
-        </tr>
-        <tr>
-          <td class="week-num">12</td>
-          <td>Nov 10</td>
-          <td>Competitive Analysis &amp; Advantage <span class="case-meta">· Southwest Airlines</span></td>
-          <td><span class="milestone-tag">AI project: competitive analysis</span></td>
-        </tr>
-        <tr>
-          <td class="week-num">13</td>
-          <td>Nov 17</td>
-          <td>Value Proposition Design <span class="case-meta">· Patagonia</span></td>
-          <td><span class="milestone-tag">AI project: value proposition testing</span></td>
-        </tr>
-        <tr>
-          <td class="week-num">14</td>
-          <td>Nov 24</td>
-          <td>Customer Lifetime Value &amp; Customer Equity <span class="case-meta">· Amazon in 2026</span></td>
-          <td><span class="milestone-tag">AI project: CLV &amp; strategic recommendations</span></td>
-        </tr>
-        <tr class="exam-row">
-          <td class="week-num">15</td>
-          <td>Dec 1</td>
-          <td>Final Presentations — AI Strategy Report</td>
-          <td><span class="milestone-tag">Final Presentation — Team</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- Resources -->
   <div class="section">
     <span class="section-label">Resources</span>
     <h2>Course Materials</h2>
@@ -861,7 +490,7 @@ footer {
           <strong>Syllabus</strong>
           <span>Course description, schedule, assignments, grading, and expectations</span>
         </div>
-        <a class="resource-link" href="files/MKTG6610_Syllabus.docx" target="_blank">
+        <a class="resource-link" href="files/MKTG6610_Syllabus.pdf" target="_blank">
           View File →
         </a>
       </div>
