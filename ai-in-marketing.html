@@ -347,6 +347,68 @@ nav a.nav-link:hover { color: var(--blue-dark); }
   color: var(--white);
 }
 
+/* ── AI TOOLS SECTION ── */
+.tools-category {
+  margin-bottom: 36px;
+}
+.tools-category-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.tool-card {
+  background: var(--white);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 20px 14px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  cursor: default;
+}
+.tool-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 22px rgba(0,8,20,0.09);
+  border-color: var(--gold);
+}
+.tool-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+.tool-name {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--blue-dark);
+  line-height: 1.35;
+}
+.tool-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.55;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  .tools-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .tools-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+}
+
 /* ── FOOTER ── */
 footer {
   background: var(--blue-darkest);
@@ -529,6 +591,169 @@ footer {
         Students regularly create, test, and refine marketing outputs using AI tools. Many activities are designed to mirror how marketing teams use AI in practice. A semester-long group project allows students to apply these skills in a realistic business context, developing a complete AI-powered marketing strategy from customer segmentation through to testing and final presentation.
       </p>
     </div>
+  </div>
+
+  <div class="section">
+    <span class="section-label">Tools</span>
+    <h2>AI Tools Students Work With</h2>
+    <p style="margin-bottom:32px;">Students explore and apply leading AI tools organized by marketing function. This list reflects the current AI landscape and evolves as new tools emerge.</p>
+
+    <div class="tools-category">
+      <div class="tools-category-label">Content &amp; Copywriting</div>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=openai.com&sz=48" alt="ChatGPT" class="tool-logo">
+          <div class="tool-name">ChatGPT</div>
+          <div class="tool-desc">Text generation, ideation, drafting</div>
+        </div>
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=anthropic.com&sz=48" alt="Claude" class="tool-logo">
+          <div class="tool-name">Claude</div>
+          <div class="tool-desc">Long-form writing, analysis, reasoning</div>
+        </div>
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=jasper.ai&sz=48" alt="Jasper" class="tool-logo">
+          <div class="tool-name">Jasper</div>
+          <div class="tool-desc">Marketing copy and brand voice</div>
+        </div>
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=copy.ai&sz=48" alt="Copy.ai" class="tool-logo">
+          <div class="tool-name">Copy.ai</div>
+          <div class="tool-desc">Ad copy, emails, product descriptions</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tools-category">
+      <div class="tools-category-label">Image &amp; Visual Design</div>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=openai.com&sz=48" alt="DALL-E 3" class="tool-logo">
+          <div class="tool-name">DALL-E 3</div>
+          <div class="tool-desc">AI image generation from prompts</div>
+        </div>
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=midjourney.com&sz=48" alt="Midjourney" class="tool-logo">
+          <div class="tool-name">Midjourney</div>
+          <div class="tool-desc">High-quality creative visuals</div>
+        </div>
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=adobe.com&sz=48" alt="Adobe Firefly" class="tool-logo">
+          <div class="tool-name">Adobe Firefly</div>
+          <div class="tool-desc">Brand-safe generative design</div>
+        </div>
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=canva.com&sz=48" alt="Canva AI" class="tool-logo">
+          <div class="tool-name">Canva AI</div>
+          <div class="tool-desc">AI-powered design and templates</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tools-category">
+      <div class="tools-category-label">Video &amp; Multimedia</div>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=runwayml.com&sz=48" alt="Runway" class="tool-logo">
+          <div class="tool-name">Runway</div>
+          <div class="tool-desc">AI video generation and editing</div>
+        </div>
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=heygen.com&sz=48" alt="HeyGen" class="tool-logo">
+          <div class="tool-name">HeyGen</div>
+          <div class="tool-desc">AI avatar and spokesperson videos</div>
+        </div>
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=synthesia.io&sz=48" alt="Synthesia" class="tool-logo">
+          <div class="tool-name">Synthesia</div>
+          <div class="tool-desc">AI video from text scripts</div>
+        </div>
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=sora.com&sz=48" alt="Sora" class="tool-logo">
+          <div class="tool-name">Sora</div>
+          <div class="tool-desc">Text-to-video generation</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tools-category">
+      <div class="tools-category-label">Market Research &amp; Insights</div>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=perplexity.ai&sz=48" alt="Perplexity" class="tool-logo">
+          <div class="tool-name">Perplexity AI</div>
+          <div class="tool-desc">Real-time research with citations</div>
+        </div>
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=notebooklm.google.com&sz=48" alt="NotebookLM" class="tool-logo">
+          <div class="tool-name">NotebookLM</div>
+          <div class="tool-desc">Analyze and synthesize documents</div>
+        </div>
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=semrush.com&sz=48" alt="Semrush" class="tool-logo">
+          <div class="tool-name">Semrush AI</div>
+          <div class="tool-desc">Competitive and keyword intelligence</div>
+        </div>
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=sparktoro.com&sz=48" alt="SparkToro" class="tool-logo">
+          <div class="tool-name">SparkToro</div>
+          <div class="tool-desc">Audience research and behavior</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tools-category">
+      <div class="tools-category-label">Email, CRM &amp; Personalization</div>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=hubspot.com&sz=48" alt="HubSpot" class="tool-logo">
+          <div class="tool-name">HubSpot AI</div>
+          <div class="tool-desc">CRM, email, and campaign automation</div>
+        </div>
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=mailchimp.com&sz=48" alt="Mailchimp" class="tool-logo">
+          <div class="tool-name">Mailchimp AI</div>
+          <div class="tool-desc">AI-assisted email marketing</div>
+        </div>
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=klaviyo.com&sz=48" alt="Klaviyo" class="tool-logo">
+          <div class="tool-name">Klaviyo</div>
+          <div class="tool-desc">Predictive personalization and segments</div>
+        </div>
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=salesforce.com&sz=48" alt="Salesforce" class="tool-logo">
+          <div class="tool-name">Salesforce Einstein</div>
+          <div class="tool-desc">AI-powered CRM and recommendations</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tools-category">
+      <div class="tools-category-label">Ad Creative &amp; Optimization</div>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=adcreative.ai&sz=48" alt="AdCreative.ai" class="tool-logo">
+          <div class="tool-name">AdCreative.ai</div>
+          <div class="tool-desc">AI-generated ad creatives and copy</div>
+        </div>
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=meta.com&sz=48" alt="Meta Advantage+" class="tool-logo">
+          <div class="tool-name">Meta Advantage+</div>
+          <div class="tool-desc">Automated ad targeting and delivery</div>
+        </div>
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=google.com&sz=48" alt="Google PMax" class="tool-logo">
+          <div class="tool-name">Google PMax</div>
+          <div class="tool-desc">AI-driven cross-channel campaigns</div>
+        </div>
+        <div class="tool-card">
+          <img src="https://www.google.com/s2/favicons?domain=pencil.li&sz=48" alt="Pencil" class="tool-logo">
+          <div class="tool-name">Pencil</div>
+          <div class="tool-desc">Predictive ad creative testing</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <div class="section">
