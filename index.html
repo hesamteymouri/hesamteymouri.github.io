@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ── SECURITY ── -->
+  <script>if(top!==self)top.location=self.location</script>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://www.google.com; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hesam Teymouri Athar, Ph.D.</title>
@@ -836,7 +841,10 @@ nav {
 /* ── RESEARCH TAB ── */
 .research-header {
   margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 2px solid var(--gold);
 }
+
 
 .research-list {
   display: flex;
@@ -1692,7 +1700,7 @@ hr.divider {
 <div id="research" class="tab">
   <div class="page">
     <div class="research-header">
-
+      <div class="section-label">Publications &amp; Projects</div>
       <h2 class="page-title">Research</h2>
       <p class="page-intro">
         My research examines customer-focused marketing strategies using behavioral data to generate actionable managerial insights. A primary focus is how customers experience and respond to technologies that take on roles traditionally performed by human employees, including AI-driven decision systems and technology-mediated service interactions.
